@@ -2006,11 +2006,23 @@ function closeSOSModal() {
     if (modal) modal.style.display = 'none';
 }
 
+function autoExpandTextarea(textarea) {
+    if (!textarea) return;
+    textarea.style.height = 'auto';
+    textarea.style.height = Math.max(110, textarea.scrollHeight + 4) + 'px';
+}
+
 // On Application Init Load
 window.addEventListener('DOMContentLoaded', () => {
     loadData();
     resetLogForm();
     updateDashboard();
+
+    // Auto expand all textareas dynamically
+    document.querySelectorAll('textarea').forEach(ta => {
+        autoExpandTextarea(ta);
+        ta.addEventListener('input', () => autoExpandTextarea(ta));
+    });
 
     // Close modals on backdrop click
     document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
