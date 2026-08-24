@@ -505,7 +505,7 @@ function setMoodValue(val) {
     document.getElementById('mood-value').value = val;
     
     // Toggle active state on buttons
-    document.querySelectorAll('.bipolar-btn, .bipolar-btn-7').forEach(btn => {
+    document.querySelectorAll('.bipolar-btn, .bipolar-btn-7, .emoji-mood-card').forEach(btn => {
         if (parseInt(btn.getAttribute('data-val')) === val) {
             btn.classList.add('active');
         } else {

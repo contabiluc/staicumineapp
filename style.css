@@ -3520,9 +3520,150 @@ textarea:focus {
     font-weight: 600;
 }
 
-@media (max-width: 680px) {
-    .bipolar-selector-7 {
-        grid-template-columns: repeat(4, 1fr);
+/* Modern Emoji Mood Grid (Inspired by Reference UI) */
+.emoji-mood-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.emoji-mood-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 0.85rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    position: relative;
+    outline: none;
+}
+
+.emoji-mood-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.emoji-mood-card .emoji-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+    transition: all 0.25s ease;
+}
+
+.emoji-mood-card .emoji-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.15rem;
+    line-height: 1.2;
+}
+
+.emoji-mood-card .emoji-sub {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1.1;
+}
+
+/* Selected Active States */
+.emoji-mood-card.active {
+    background: rgba(99, 102, 241, 0.18);
+    border: 2px solid var(--accent-primary);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
+    transform: scale(1.02);
+}
+
+.emoji-mood-card.active .emoji-avatar {
+    background: var(--accent-primary);
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.5);
+}
+
+.emoji-mood-card.active.depression-severe {
+    background: rgba(239, 68, 68, 0.18);
+    border-color: #ef4444;
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.35);
+}
+
+.emoji-mood-card.active.depression-severe .emoji-avatar {
+    background: #ef4444;
+}
+
+.emoji-mood-card.active.depression-moderate {
+    background: rgba(59, 130, 246, 0.18);
+    border-color: #3b82f6;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
+}
+
+.emoji-mood-card.active.depression-moderate .emoji-avatar {
+    background: #3b82f6;
+}
+
+.emoji-mood-card.active.depression-mild {
+    background: rgba(96, 165, 250, 0.18);
+    border-color: #60a5fa;
+    box-shadow: 0 4px 16px rgba(96, 165, 250, 0.35);
+}
+
+.emoji-mood-card.active.depression-mild .emoji-avatar {
+    background: #60a5fa;
+}
+
+.emoji-mood-card.active.stable {
+    background: rgba(16, 185, 129, 0.18);
+    border-color: #10b981;
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);
+}
+
+.emoji-mood-card.active.stable .emoji-avatar {
+    background: #10b981;
+}
+
+.emoji-mood-card.active.mania-mild {
+    background: rgba(168, 85, 247, 0.18);
+    border-color: #a855f7;
+    box-shadow: 0 4px 16px rgba(168, 85, 247, 0.35);
+}
+
+.emoji-mood-card.active.mania-mild .emoji-avatar {
+    background: #a855f7;
+}
+
+.emoji-mood-card.active.mania-moderate {
+    background: rgba(217, 70, 239, 0.18);
+    border-color: #d946ef;
+    box-shadow: 0 4px 16px rgba(217, 70, 239, 0.35);
+}
+
+.emoji-mood-card.active.mania-moderate .emoji-avatar {
+    background: #d946ef;
+}
+
+.emoji-mood-card.active.mania-severe {
+    background: rgba(236, 72, 153, 0.18);
+    border-color: #ec4899;
+    box-shadow: 0 4px 16px rgba(236, 72, 153, 0.35);
+}
+
+.emoji-mood-card.active.mania-severe .emoji-avatar {
+    background: #ec4899;
+}
+
+@media (max-width: 600px) {
+    .emoji-mood-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
     }
 }
 

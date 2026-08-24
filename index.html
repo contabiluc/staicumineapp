@@ -606,34 +606,41 @@
                                 </div>
                             </div>
                             
-                            <div class="bipolar-selector-7">
-                                <button type="button" class="bipolar-btn-7 depression-severe" data-val="-5" onclick="setMoodValue(-5)">
-                                    <span class="val">-5</span>
-                                    <span class="lbl-top">Dep. sev.</span>
+                            <div class="emoji-mood-grid">
+                                <button type="button" class="emoji-mood-card depression-severe" data-val="-5" onclick="setMoodValue(-5)">
+                                    <div class="emoji-avatar">😭</div>
+                                    <span class="emoji-title">Depresie Severă</span>
+                                    <span class="emoji-sub">-5 • Tristețe copleșitoare</span>
                                 </button>
-                                <button type="button" class="bipolar-btn-7 depression-moderate" data-val="-3" onclick="setMoodValue(-3)">
-                                    <span class="val">-3</span>
-                                    <span class="lbl-top">Dep. mod.</span>
+                                <button type="button" class="emoji-mood-card depression-moderate" data-val="-3" onclick="setMoodValue(-3)">
+                                    <div class="emoji-avatar">😔</div>
+                                    <span class="emoji-title">Depresie Moderată</span>
+                                    <span class="emoji-sub">-3 • Retragere & oboseală</span>
                                 </button>
-                                <button type="button" class="bipolar-btn-7 depression-mild" data-val="-1" onclick="setMoodValue(-1)">
-                                    <span class="val">-1</span>
-                                    <span class="lbl-top">Dep. ușoară</span>
+                                <button type="button" class="emoji-mood-card depression-mild" data-val="-1" onclick="setMoodValue(-1)">
+                                    <div class="emoji-avatar">🙁</div>
+                                    <span class="emoji-title">Depresie Ușoară</span>
+                                    <span class="emoji-sub">-1 • Ușor sub echilibru</span>
                                 </button>
-                                <button type="button" class="bipolar-btn-7 stable active" data-val="0" onclick="setMoodValue(0)">
-                                    <span class="val">0</span>
-                                    <span class="lbl-top">Stabil</span>
+                                <button type="button" class="emoji-mood-card stable active" data-val="0" onclick="setMoodValue(0)">
+                                    <div class="emoji-avatar">😊</div>
+                                    <span class="emoji-title">Echilibrat / Stabil</span>
+                                    <span class="emoji-sub">0 • Liniștit & în pace</span>
                                 </button>
-                                <button type="button" class="bipolar-btn-7 mania-mild" data-val="1" onclick="setMoodValue(1)">
-                                    <span class="val">+1</span>
-                                    <span class="lbl-top">Hipomanie</span>
+                                <button type="button" class="emoji-mood-card mania-mild" data-val="1" onclick="setMoodValue(1)">
+                                    <div class="emoji-avatar">😄</div>
+                                    <span class="emoji-title">Hipomanie Ușoară</span>
+                                    <span class="emoji-sub">+1 • Optimist & energic</span>
                                 </button>
-                                <button type="button" class="bipolar-btn-7 mania-moderate" data-val="3" onclick="setMoodValue(3)">
-                                    <span class="val">+3</span>
-                                    <span class="lbl-top">Manie mod.</span>
+                                <button type="button" class="emoji-mood-card mania-moderate" data-val="3" onclick="setMoodValue(3)">
+                                    <div class="emoji-avatar">🤩</div>
+                                    <span class="emoji-title">Manie Moderată</span>
+                                    <span class="emoji-sub">+3 • Hiperactiv & vorbăreț</span>
                                 </button>
-                                <button type="button" class="bipolar-btn-7 mania-severe" data-val="5" onclick="setMoodValue(5)">
-                                    <span class="val">+5</span>
-                                    <span class="lbl-top">Manie sev.</span>
+                                <button type="button" class="emoji-mood-card mania-severe" data-val="5" onclick="setMoodValue(5)">
+                                    <div class="emoji-avatar">🤯</div>
+                                    <span class="emoji-title">Manie Severă</span>
+                                    <span class="emoji-sub">+5 • Impulsiv & agitat</span>
                                 </button>
                             </div>
                             <input type="hidden" id="mood-value" value="0">
