@@ -2039,14 +2039,17 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Helper: Toggle Mood Guide Accordion Panel
-function toggleMoodGuidePanel() {
+function toggleMoodGuide() {
     const panel = document.getElementById('mood-guide-panel');
     if (!panel) return;
-    if (panel.style.display === 'none') {
+    if (panel.style.display === 'none' || panel.style.display === '') {
         panel.style.display = 'block';
     } else {
         panel.style.display = 'none';
     }
+}
+function toggleMoodGuidePanel() {
+    toggleMoodGuide();
 }
 
 // Close backup warning banner & hide it for 7 days
