@@ -278,13 +278,17 @@
                     </div>
                     <h2>Staicumine</h2>
                 </div>
+                <div class="lang-switch-container sidebar-lang-switch">
+                    <button type="button" class="lang-btn active" data-lang="ro" onclick="setLanguage('ro')" title="Română">RO</button>
+                    <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English">EN</button>
+                </div>
                 <button class="sidebar-close-btn" onclick="closeMobileMenu()" aria-label="Închide meniul">&times;</button>
             </div>
             
             <div class="sidebar-crisis-container">
                 <button class="crisis-help-btn sidebar-crisis-btn" onclick="openCrisisHelpModal()">
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <span>Am nevoie de ajutor</span>
+                    <span data-i18n="nav_crisis">Am nevoie de ajutor</span>
                 </button>
             </div>
             
@@ -294,19 +298,19 @@
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                         <polyline points="9 22 9 12 15 12 15 22"/>
                     </svg>
-                    <span>Acasă</span>
+                    <span data-i18n="nav_dashboard">Acasă</span>
                 </button>
                 <button class="nav-btn" id="btn-log" onclick="switchTab('log')">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 5v14M5 12h14"/>
                     </svg>
-                    <span>Check-in</span>
+                    <span data-i18n="nav_log">Check-in</span>
                 </button>
                 <button class="nav-btn" id="btn-safety" onclick="switchTab('safety')">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                     </svg>
-                    <span>Plan de siguranță</span>
+                    <span data-i18n="nav_safety">Plan de siguranță</span>
                 </button>
                 <button class="nav-btn" id="btn-history" onclick="switchTab('history')">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -315,21 +319,21 @@
                         <line x1="8" y1="2" x2="8" y2="6"/>
                         <line x1="3" y1="10" x2="21" y2="10"/>
                     </svg>
-                    <span>Istoric</span>
+                    <span data-i18n="nav_history">Istoric</span>
                 </button>
                 <button class="nav-btn" id="btn-guides" onclick="switchTab('guides')">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
                         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
                     </svg>
-                    <span>Resurse</span>
+                    <span data-i18n="nav_guides">Resurse</span>
                 </button>
                 <button class="nav-btn" id="btn-settings" onclick="switchTab('settings')">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="3"/>
-                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l-.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
                     </svg>
-                    <span>Date &amp; setări</span>
+                    <span data-i18n="nav_settings">Date &amp; setări</span>
                 </button>
             </nav>
 
@@ -339,7 +343,7 @@
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                         <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                     </svg>
-                    <span>Date stocate local 100%</span>
+                    <span data-i18n="privacy_badge">Date stocate local 100%</span>
                 </div>
             </div>
         </aside>
@@ -351,6 +355,10 @@
                 <div>
                     <h1 id="header-title">Staicumine</h1>
                     <p id="header-subtitle" class="subtitle">Monitorizează-ți starea. Înțelege-ți tiparele.</p>
+                </div>
+                <div class="lang-switch-container header-lang-switch">
+                    <button type="button" class="lang-btn active" data-lang="ro" onclick="setLanguage('ro')" aria-label="Limba Română">🇷🇴 RO</button>
+                    <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-label="English Language">🇬🇧 EN</button>
                 </div>
             </header>
 
@@ -375,7 +383,7 @@
                 <div class="stats-grid">
                     <div class="stat-card glass">
                         <div class="stat-header">
-                            <span class="stat-title">Starea ta</span>
+                            <span class="stat-title" data-i18n="stat_mood_title">Starea ta</span>
                             <span class="stat-icon mood-icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
@@ -388,7 +396,7 @@
 
                     <div class="stat-card glass">
                         <div class="stat-header">
-                            <span class="stat-title">Somn</span>
+                            <span class="stat-title" data-i18n="stat_sleep_title">Somn</span>
                             <span class="stat-icon sleep-icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -401,7 +409,7 @@
 
                     <div class="stat-card glass">
                         <div class="stat-header">
-                            <span class="stat-title">Anxietate</span>
+                            <span class="stat-title" data-i18n="stat_anxiety_title">Anxietate</span>
                             <span class="stat-icon anxiety-icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
                                     <circle cx="12" cy="12" r="10"/>
@@ -415,7 +423,7 @@
 
                     <div class="stat-card glass">
                         <div class="stat-header">
-                            <span class="stat-title">Energie</span>
+                            <span class="stat-title" data-i18n="stat_energy_title">Energie</span>
                             <span class="stat-icon energy-icon" aria-hidden="true">
                                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
                                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
@@ -622,38 +630,38 @@
                             <div class="emoji-mood-grid">
                                 <button type="button" class="emoji-mood-card depression-severe" data-val="-5" onclick="setMoodValue(-5)">
                                     <div class="emoji-avatar">😭</div>
-                                    <span class="emoji-title">Depresie Severă</span>
-                                    <span class="emoji-sub">-5 • Tristețe copleșitoare</span>
+                                    <span class="emoji-title" data-i18n="mood_m5">Depresie Severă</span>
+                                    <span class="emoji-sub" data-i18n="mood_m5_sub">-5 • Tristețe copleșitoare</span>
                                 </button>
                                 <button type="button" class="emoji-mood-card depression-moderate" data-val="-3" onclick="setMoodValue(-3)">
                                     <div class="emoji-avatar">😔</div>
-                                    <span class="emoji-title">Depresie Moderată</span>
-                                    <span class="emoji-sub">-3 • Retragere & oboseală</span>
+                                    <span class="emoji-title" data-i18n="mood_m3">Depresie Moderată</span>
+                                    <span class="emoji-sub" data-i18n="mood_m3_sub">-3 • Retragere & oboseală</span>
                                 </button>
                                 <button type="button" class="emoji-mood-card depression-mild" data-val="-1" onclick="setMoodValue(-1)">
                                     <div class="emoji-avatar">🙁</div>
-                                    <span class="emoji-title">Depresie Ușoară</span>
-                                    <span class="emoji-sub">-1 • Ușor sub echilibru</span>
+                                    <span class="emoji-title" data-i18n="mood_m1">Depresie Ușoară</span>
+                                    <span class="emoji-sub" data-i18n="mood_m1_sub">-1 • Ușor sub echilibru</span>
                                 </button>
                                 <button type="button" class="emoji-mood-card stable active" data-val="0" onclick="setMoodValue(0)">
                                     <div class="emoji-avatar">😊</div>
-                                    <span class="emoji-title">Echilibrat / Stabil</span>
-                                    <span class="emoji-sub">0 • Liniștit & în pace</span>
+                                    <span class="emoji-title" data-i18n="mood_0">Echilibrat / Stabil</span>
+                                    <span class="emoji-sub" data-i18n="mood_0_sub">0 • Liniștit & în pace</span>
                                 </button>
                                 <button type="button" class="emoji-mood-card mania-mild" data-val="1" onclick="setMoodValue(1)">
                                     <div class="emoji-avatar">😄</div>
-                                    <span class="emoji-title">Hipomanie Ușoară</span>
-                                    <span class="emoji-sub">+1 • Optimist & energic</span>
+                                    <span class="emoji-title" data-i18n="mood_p1">Hipomanie Ușoară</span>
+                                    <span class="emoji-sub" data-i18n="mood_p1_sub">+1 • Optimist & energic</span>
                                 </button>
                                 <button type="button" class="emoji-mood-card mania-moderate" data-val="3" onclick="setMoodValue(3)">
                                     <div class="emoji-avatar">🤩</div>
-                                    <span class="emoji-title">Manie Moderată</span>
-                                    <span class="emoji-sub">+3 • Hiperactiv & vorbăreț</span>
+                                    <span class="emoji-title" data-i18n="mood_p3">Manie Moderată</span>
+                                    <span class="emoji-sub" data-i18n="mood_p3_sub">+3 • Hiperactiv & vorbăreț</span>
                                 </button>
                                 <button type="button" class="emoji-mood-card mania-severe" data-val="5" onclick="setMoodValue(5)">
                                     <div class="emoji-avatar">🤯</div>
-                                    <span class="emoji-title">Manie Severă</span>
-                                    <span class="emoji-sub">+5 • Impulsiv & agitat</span>
+                                    <span class="emoji-title" data-i18n="mood_p5">Manie Severă</span>
+                                    <span class="emoji-sub" data-i18n="mood_p5_sub">+5 • Impulsiv & agitat</span>
                                 </button>
                             </div>
                             <input type="hidden" id="mood-value" value="0">
@@ -664,8 +672,8 @@
                             <div class="step-header">
                                 <span class="step-number">2</span>
                                 <div class="step-title-group">
-                                    <h3>Cum ai dormit?</h3>
-                                    <p>Cât ai dormit noaptea trecută?</p>
+                                    <h3 data-i18n="step2_title">Cum ai dormit?</h3>
+                                    <p data-i18n="step2_sub">Cât ai dormit noaptea trecută?</p>
                                 </div>
                             </div>
                             <div class="slider-wrapper-bottom">
@@ -679,14 +687,14 @@
                             <div class="step-header">
                                 <span class="step-number">3</span>
                                 <div class="step-title-group">
-                                    <h3>Cum te simți fizic?</h3>
-                                    <p>Urmărește nivelul de anxietate și energie.</p>
+                                    <h3 data-i18n="step3_title">Cum te simți fizic?</h3>
+                                    <p data-i18n="step3_sub">Urmărește nivelul de anxietate și energie.</p>
                                 </div>
                             </div>
 
                             <div class="sliders-grid-2">
                                 <div class="slider-box">
-                                    <label for="anxiety-level">Nivel de anxietate</label>
+                                    <label for="anxiety-level" data-i18n="step3_anxiety_label">Nivel de anxietate</label>
                                     <div class="slider-wrapper-bottom">
                                         <input type="range" id="anxiety-level" min="0" max="10" step="1" value="2" oninput="updateSliderVal('anxiety-val', this.value); saveDraft();">
                                         <div class="slider-val-badge-bottom" id="anxiety-val">2 / 10 • Tolerabilă</div>
@@ -694,7 +702,7 @@
                                 </div>
 
                                 <div class="slider-box">
-                                    <label for="energy-level">Nivel de energie</label>
+                                    <label for="energy-level" data-i18n="step3_energy_label">Nivel de energie</label>
                                     <div class="slider-wrapper-bottom">
                                         <input type="range" id="energy-level" min="0" max="10" step="1" value="5" oninput="updateSliderVal('energy-val', this.value); saveDraft();">
                                         <div class="slider-val-badge-bottom" id="energy-val">5 / 10 • Moderată</div>
@@ -708,8 +716,8 @@
                             <div class="step-header">
                                 <span class="step-number">4</span>
                                 <div class="step-title-group">
-                                    <h3>Ai observat ceva astăzi?</h3>
-                                    <p>Selectează stările sau simptomele trăite.</p>
+                                    <h3 data-i18n="step4_title">Ai observat ceva astăzi?</h3>
+                                    <p data-i18n="step4_sub">Selectează stările sau simptomele trăite.</p>
                                 </div>
                             </div>
 
@@ -717,42 +725,42 @@
                                 <div class="symptom-card" onclick="toggleSymptomCard(this)">
                                     <input type="checkbox" name="symptom" value="iritabilitate" style="display:none">
                                     <span class="symptom-icon">✓</span>
-                                    <span class="symptom-text">Iritabilitate</span>
+                                    <span class="symptom-text" data-i18n-symptom="iritabilitate">Iritabilitate</span>
                                 </div>
                                 <div class="symptom-card" onclick="toggleSymptomCard(this)">
                                     <input type="checkbox" name="symptom" value="ganduri_accelerate" style="display:none">
                                     <span class="symptom-icon">✓</span>
-                                    <span class="symptom-text">Gânduri accelerate</span>
+                                    <span class="symptom-text" data-i18n-symptom="ganduri_accelerate">Gânduri accelerate</span>
                                 </div>
                                 <div class="symptom-card" onclick="toggleSymptomCard(this)">
                                     <input type="checkbox" name="symptom" value="agitatie_motorie" style="display:none">
                                     <span class="symptom-icon">✓</span>
-                                    <span class="symptom-text">Agitație motorie</span>
+                                    <span class="symptom-text" data-i18n-symptom="agitatie_motorie">Agitație motorie</span>
                                 </div>
                                 <div class="symptom-card" onclick="toggleSymptomCard(this)">
                                     <input type="checkbox" name="symptom" value="tristete" style="display:none">
                                     <span class="symptom-icon">✓</span>
-                                    <span class="symptom-text">Tristețe / Plâns</span>
+                                    <span class="symptom-text" data-i18n-symptom="tristete">Tristețe / Plâns</span>
                                 </div>
                                 <div class="symptom-card" onclick="toggleSymptomCard(this)">
                                     <input type="checkbox" name="symptom" value="lipsa_concentrare" style="display:none">
                                     <span class="symptom-icon">✓</span>
-                                    <span class="symptom-text">Lipsă de concentrare</span>
+                                    <span class="symptom-text" data-i18n-symptom="lipsa_concentrare">Lipsă de concentrare</span>
                                 </div>
                                 <div class="symptom-card" onclick="toggleSymptomCard(this)">
                                     <input type="checkbox" name="symptom" value="retragere_sociala" style="display:none">
                                     <span class="symptom-icon">✓</span>
-                                    <span class="symptom-text">Retragere socială</span>
+                                    <span class="symptom-text" data-i18n-symptom="retragere_sociala">Retragere socială</span>
                                 </div>
                                 <div class="symptom-card" onclick="toggleSymptomCard(this)">
                                     <input type="checkbox" name="symptom" value="atac_panica" style="display:none">
                                     <span class="symptom-icon">✓</span>
-                                    <span class="symptom-text">Atac de panică</span>
+                                    <span class="symptom-text" data-i18n-symptom="atac_panica">Atac de panică</span>
                                 </div>
                                 <div class="symptom-card" onclick="toggleSymptomCard(this)">
                                     <input type="checkbox" name="symptom" value="impulsivitate" style="display:none">
                                     <span class="symptom-icon">✓</span>
-                                    <span class="symptom-text">Impulsivitate</span>
+                                    <span class="symptom-text" data-i18n-symptom="impulsivitate">Impulsivitate</span>
                                 </div>
                             </div>
                         </div>
@@ -763,13 +771,13 @@
                                 <div class="step-header compact">
                                     <span class="step-number sm">5</span>
                                     <div class="step-title-group">
-                                        <h3>Tratament</h3>
+                                        <h3 data-i18n="step5_med_title">Tratament</h3>
                                     </div>
                                 </div>
                                 <label class="compact-treatment-checkbox">
                                     <input type="checkbox" id="medication-taken" checked onchange="saveDraft()">
                                     <span class="checkbox-box-custom">✓</span>
-                                    <span class="checkbox-label-compact">Am urmat tratamentul prescris astăzi</span>
+                                    <span class="checkbox-label-compact" data-i18n="step5_med_label">Am urmat tratamentul prescris astăzi</span>
                                 </label>
                             </div>
                         </div>
@@ -779,7 +787,7 @@
                             <div class="step-header">
                                 <span class="step-number">6</span>
                                 <div class="step-title-group">
-                                    <h3>Ce a influențat starea ta astăzi?</h3>
+                                    <h3 data-i18n="step6_notes_title">Ce a influențat starea ta astăzi?</h3>
                                 </div>
                             </div>
 
@@ -793,8 +801,9 @@
 
                         <!-- Form Actions -->
                         <div class="form-actions">
-                            <button type="submit" class="action-btn-primary submit-btn">Salvează check-in-ul</button>
-                            <button type="button" class="action-btn-secondary" onclick="switchTab('dashboard')">Renunță</button>
+                            <button type="submit" class="action-btn-primary submit-btn" data-i18n="submit_btn_save">Salvează check-in-ul</button>
+                            <button type="button" class="action-btn-secondary" onclick="switchTab('dashboard')" data-i18n="btn_cancel">Renunță</button>
+                        </div>
                         </div>
 
                     </form>
@@ -1017,29 +1026,38 @@
             <section id="view-settings" class="tab-view">
                 <div class="settings-container">
                     <div class="settings-card glass">
-                        <h3>Gestionarea Datelor Tale</h3>
-                        <p class="settings-desc">Toate datele introduse în această aplicație sunt stocate în mod exclusiv în browser-ul tău local (prin intermediul API-ului localStorage). Nimic nu este trimis către niciun server extern, asigurându-ți intimitate absolută.</p>
+                        <h3 data-i18n="settings_lang_title">Limbă / Language</h3>
+                        <p class="settings-desc" data-i18n="settings_lang_desc">Selectează limba în care dorești să utilizezi aplicația Staicumine.</p>
+                        <div class="lang-switch-container settings-lang-picker">
+                            <button type="button" class="lang-btn active" data-lang="ro" onclick="setLanguage('ro')">🇷🇴 Română</button>
+                            <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')">🇬🇧 English</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-card glass">
+                        <h3 data-i18n="settings_data_title">Gestionarea Datelor Tale</h3>
+                        <p class="settings-desc" data-i18n="settings_data_desc">Toate datele introduse în această aplicație sunt stocate în mod exclusiv în browser-ul tău local (prin intermediul API-ului localStorage). Nimic nu este trimis către niciun server extern, asigurându-ți intimitate absolută.</p>
                         
                         <div class="settings-actions-grid">
                             <div class="action-box">
-                                <h4>Exportă Datele (Backup)</h4>
-                                <p>Descarcă toate înregistrările tale și planul de siguranță într-un fișier securizat JSON.</p>
-                                <button class="action-btn-primary" onclick="exportData()">Exportă ca JSON</button>
+                                <h4 data-i18n="settings_export_title">Exportă Datele (Backup)</h4>
+                                <p data-i18n="settings_export_desc">Descarcă toate înregistrările tale și planul de siguranță într-un fișier securizat JSON.</p>
+                                <button class="action-btn-primary" onclick="exportData()" data-i18n="settings_export_btn">Exportă ca JSON</button>
                             </div>
 
                             <div class="action-box">
-                                <h4>Importă Datele</h4>
-                                <p>Încarcă un backup realizat anterior pentru a restaura istoricul stărilor tale.</p>
+                                <h4 data-i18n="settings_import_title">Importă Datele</h4>
+                                <p data-i18n="settings_import_desc">Încarcă un backup realizat anterior pentru a restaura istoricul stărilor tale.</p>
                                 <div class="import-wrapper">
                                     <input type="file" id="import-file" accept=".json" onchange="importData(event)" style="display: none;">
-                                    <button class="action-btn-secondary" onclick="document.getElementById('import-file').click()">Alege Fișier JSON</button>
+                                    <button class="action-btn-secondary" onclick="document.getElementById('import-file').click()" data-i18n="settings_import_btn">Alege Fișier JSON</button>
                                 </div>
                             </div>
 
                             <div class="action-box danger-zone">
-                                <h4>Zona de Pericol</h4>
-                                <p>Șterge definitiv toate datele din browser-ul curent. Această acțiune este ireversibilă!</p>
-                                <button class="action-btn-danger" onclick="clearAllData()">Șterge Toate Datele</button>
+                                <h4 data-i18n="settings_danger_title">Zona de Pericol</h4>
+                                <p data-i18n="settings_danger_desc">Șterge definitiv toate datele din browser-ul curent. Această acțiune este ireversibilă!</p>
+                                <button class="action-btn-danger" onclick="clearAllData()" data-i18n="settings_danger_btn">Șterge Toate Datele</button>
                             </div>
                         </div>
                     </div>

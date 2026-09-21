@@ -294,6 +294,56 @@ body {
     color: var(--text-secondary);
 }
 
+/* Language Switcher Styling */
+.lang-switch-container {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 3px;
+    gap: 3px;
+    backdrop-filter: blur(8px);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.lang-btn:hover {
+    color: var(--text-primary);
+}
+
+.lang-btn.active {
+    background: rgba(99, 102, 241, 0.25);
+    color: #ffffff;
+    border: 1px solid var(--accent-primary);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+.sidebar-lang-switch {
+    margin: 0.25rem 0.5rem 0 0;
+}
+
+.settings-lang-picker {
+    margin-top: 0.75rem;
+    padding: 5px;
+}
+
+.settings-lang-picker .lang-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
 .quick-stats-header {
     display: flex;
     gap: 1rem;

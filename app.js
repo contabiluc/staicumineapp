@@ -2,6 +2,255 @@
    Staicumine Mood Tracker - Application Logic
 ------------------------------------------------------------- */
 
+// Internationalization (i18n) - Bilingual Support (RO / EN)
+const TRANSLATIONS = {
+    ro: {
+        app_title: "Staicumine",
+        tab_title_dashboard: "Acasă",
+        tab_sub_dashboard: "Monitorizează-ți starea. Înțelege-ți tiparele.",
+        tab_title_log: "Check-in",
+        tab_sub_log: "Urmărește-ți dispoziția, somnul și factorii care îți influențează starea.",
+        tab_title_history: "Istoric",
+        tab_sub_history: "Revizuiește toate înregistrările tale și observă dinamica emoțională.",
+        tab_title_safety: "Plan de siguranță",
+        tab_sub_safety: "Strategii personale și resurse de suport în caz de criză.",
+        tab_title_settings: "Date & setări",
+        tab_sub_settings: "Exportă, importă sau șterge datele stocate exclusiv în browser.",
+        tab_title_guides: "Resurse",
+        tab_sub_guides: "Recomandări bazate pe dovezi științifice pentru calmarea anxietății, somn odihnitor și echilibru emotiv.",
+
+        nav_crisis: "Am nevoie de ajutor",
+        nav_dashboard: "Acasă",
+        nav_log: "Check-in",
+        nav_safety: "Plan de siguranță",
+        nav_history: "Istoric",
+        nav_guides: "Resurse",
+        nav_settings: "Date & setări",
+        privacy_badge: "Date stocate local 100%",
+
+        step1_title: "Cum te-ai simțit astăzi?",
+        step1_sub: "Alege nivelul care descrie cel mai bine starea ta.",
+        step2_title: "Cum ai dormit?",
+        step2_sub: "Cât ai dormit noaptea trecută?",
+        step3_title: "Cum te simți fizic?",
+        step3_sub: "Urmărește nivelul de anxietate și energie.",
+        step3_anxiety_label: "Nivel de anxietate",
+        step3_energy_label: "Nivel de energie",
+        step4_title: "Ai observat ceva astăzi?",
+        step4_sub: "Selectează stările sau simptomele trăite.",
+        step5_med_title: "Tratament",
+        step5_med_label: "Am urmat tratamentul prescris astăzi",
+        step6_notes_title: "Ce a influențat starea ta astăzi?",
+        submit_btn_save: "Salvează check-in-ul",
+        submit_btn_update: "Actualizează check-in-ul",
+        btn_cancel: "Renunță",
+        guide_btn: "Ghid",
+
+        mood_m5: "Depresie Severă",
+        mood_m5_sub: "-5 • Tristețe copleșitoare",
+        mood_m3: "Depresie Moderată",
+        mood_m3_sub: "-3 • Retragere & oboseală",
+        mood_m1: "Depresie Ușoară",
+        mood_m1_sub: "-1 • Ușor sub echilibru",
+        mood_0: "Echilibrat / Stabil",
+        mood_0_sub: "0 • Liniștit & în pace",
+        mood_p1: "Hipomanie Ușoară",
+        mood_p1_sub: "+1 • Optimist & energic",
+        mood_p3: "Manie Moderată",
+        mood_p3_sub: "+3 • Hiperactiv & vorbăreț",
+        mood_p5: "Manie Severă",
+        mood_p5_sub: "+5 • Impulsiv & agitat",
+
+        stat_mood_title: "Starea ta",
+        stat_sleep_title: "Somn",
+        stat_anxiety_title: "Anxietate",
+        stat_energy_title: "Energie",
+        stat_no_data: "Fără date",
+
+        settings_lang_title: "Limbă / Language",
+        settings_lang_desc: "Selectează limba în care dorești să utilizezi aplicația Staicumine.",
+        settings_data_title: "Gestionarea Datelor Tale",
+        settings_data_desc: "Toate datele introduse în această aplicație sunt stocate în mod exclusiv în browser-ul tău local (prin intermediul API-ului localStorage). Nimic nu este trimis către niciun server extern, asigurându-ți intimitate absolută.",
+        settings_export_title: "Exportă Datele (Backup)",
+        settings_export_desc: "Descarcă toate înregistrările tale și planul de siguranță într-un fișier securizat JSON.",
+        settings_export_btn: "Exportă ca JSON",
+        settings_import_title: "Importă Datele",
+        settings_import_desc: "Încarcă un backup realizat anterior pentru a restaura istoricul stărilor tale.",
+        settings_import_btn: "Alege Fișier JSON",
+        settings_danger_title: "Zona de Pericol",
+        settings_danger_desc: "Șterge definitiv toate datele din browser-ul curent. Această acțiune este ireversibilă!",
+        settings_danger_btn: "Șterge Toate Datele",
+
+        symptom_iritabilitate: "Iritabilitate",
+        symptom_ganduri_accelerate: "Gânduri accelerate",
+        symptom_agitatie_motorie: "Agitație motorie",
+        symptom_tristete: "Tristețe / Plâns",
+        symptom_lipsa_concentrare: "Lipsă de concentrare",
+        symptom_retragere_sociala: "Retragere socială",
+        symptom_atac_panica: "Atac de panică",
+        symptom_impulsivitate: "Impulsivitate"
+    },
+    en: {
+        app_title: "Staicumine",
+        tab_title_dashboard: "Home",
+        tab_sub_dashboard: "Track your mood. Understand your patterns.",
+        tab_title_log: "Check-in",
+        tab_sub_log: "Track your mood level, sleep duration, and factors influencing your day.",
+        tab_title_history: "History",
+        tab_sub_history: "Review all your past entries and observe emotional patterns.",
+        tab_title_safety: "Safety Plan",
+        tab_sub_safety: "Personal coping strategies and crisis support resources.",
+        tab_title_settings: "Data & Settings",
+        tab_sub_settings: "Export, import, or manage your locally stored data.",
+        tab_title_guides: "Resources",
+        tab_sub_guides: "Evidence-based guides for calming anxiety, restful sleep, and emotional balance.",
+
+        nav_crisis: "I need help (SOS)",
+        nav_dashboard: "Home",
+        nav_log: "Check-in",
+        nav_safety: "Safety Plan",
+        nav_history: "History",
+        nav_guides: "Resources",
+        nav_settings: "Data & Settings",
+        privacy_badge: "100% Locally Stored",
+
+        step1_title: "How did you feel today?",
+        step1_sub: "Choose the level that best describes your overall mood.",
+        step2_title: "How did you sleep?",
+        step2_sub: "Hours of sleep last night.",
+        step3_title: "How do you feel physically?",
+        step3_sub: "Track your anxiety and energy levels.",
+        step3_anxiety_label: "Anxiety Level",
+        step3_energy_label: "Energy Level",
+        step4_title: "Did you notice anything today?",
+        step4_sub: "Select the states or symptoms experienced.",
+        step5_med_title: "Medication",
+        step5_med_label: "I took my prescribed medication today",
+        step6_notes_title: "What influenced your mood today?",
+        submit_btn_save: "Save check-in",
+        submit_btn_update: "Update check-in",
+        btn_cancel: "Cancel",
+        guide_btn: "Guide",
+
+        mood_m5: "Severe Depression",
+        mood_m5_sub: "-5 • Overwhelming sadness",
+        mood_m3: "Moderate Depression",
+        mood_m3_sub: "-3 • Withdrawal & fatigue",
+        mood_m1: "Mild Depression",
+        mood_m1_sub: "-1 • Slightly low",
+        mood_0: "Balanced / Stable",
+        mood_0_sub: "0 • Calm & peaceful",
+        mood_p1: "Mild Hypomania",
+        mood_p1_sub: "+1 • Optimistic & energetic",
+        mood_p3: "Moderate Mania",
+        mood_p3_sub: "+3 • Hyperactive & talkative",
+        mood_p5: "Severe Mania",
+        mood_p5_sub: "+5 • Impulsive & agitated",
+
+        stat_mood_title: "Your Mood",
+        stat_sleep_title: "Sleep",
+        stat_anxiety_title: "Anxiety",
+        stat_energy_title: "Energy",
+        stat_no_data: "No data",
+
+        settings_lang_title: "Language / Limbă",
+        settings_lang_desc: "Select the language you want to use for Staicumine.",
+        settings_data_title: "Managing Your Data",
+        settings_data_desc: "All data entered in this application is stored exclusively in your local browser (using the localStorage API). Nothing is sent to any external server, guaranteeing total privacy.",
+        settings_export_title: "Export Data (Backup)",
+        settings_export_desc: "Download all your logs and safety plan into a secure JSON file.",
+        settings_export_btn: "Export as JSON",
+        settings_import_title: "Import Data",
+        settings_import_desc: "Load a previously saved backup to restore your mood history.",
+        settings_import_btn: "Choose JSON File",
+        settings_danger_title: "Danger Zone",
+        settings_danger_desc: "Permanently delete all data from this browser. This action cannot be undone!",
+        settings_danger_btn: "Delete All Data",
+
+        symptom_iritabilitate: "Irritability",
+        symptom_ganduri_accelerate: "Racing thoughts",
+        symptom_agitatie_motorie: "Motor agitation",
+        symptom_tristete: "Sadness / Crying",
+        symptom_lipsa_concentrare: "Lack of focus",
+        symptom_retragere_sociala: "Social withdrawal",
+        symptom_atac_panica: "Panic attack",
+        symptom_impulsivitate: "Impulsivity"
+    }
+};
+
+let currentLanguage = 'ro';
+
+function t(key) {
+    if (TRANSLATIONS[currentLanguage] && TRANSLATIONS[currentLanguage][key]) {
+        return TRANSLATIONS[currentLanguage][key];
+    }
+    if (TRANSLATIONS['ro'] && TRANSLATIONS['ro'][key]) {
+        return TRANSLATIONS['ro'][key];
+    }
+    return key;
+}
+
+function setLanguage(lang) {
+    if (lang !== 'ro' && lang !== 'en') lang = 'ro';
+    currentLanguage = lang;
+    localStorage.setItem('staicumine_lang', lang);
+
+    // Update active class on language toggle buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    // Update all elements with data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) {
+            el.textContent = TRANSLATIONS[lang][key];
+        }
+    });
+
+    // Update symptom cards text with data-i18n-symptom
+    document.querySelectorAll('[data-i18n-symptom]').forEach(el => {
+        const sym = el.getAttribute('data-i18n-symptom');
+        const symKey = `symptom_${sym}`;
+        if (TRANSLATIONS[lang] && TRANSLATIONS[lang][symKey]) {
+            el.textContent = TRANSLATIONS[lang][symKey];
+        }
+    });
+
+    // Refresh active tab headers
+    const activeBtn = document.querySelector('.nav-btn.active');
+    const tabId = activeBtn ? activeBtn.id.replace('btn-', '') : 'dashboard';
+    const headerTitle = document.getElementById('header-title');
+    const headerSubtitle = document.getElementById('header-subtitle');
+    if (headerTitle && TRANSLATIONS[lang][`tab_title_${tabId}`]) {
+        headerTitle.textContent = TRANSLATIONS[lang][`tab_title_${tabId}`];
+    }
+    if (headerSubtitle && TRANSLATIONS[lang][`tab_sub_${tabId}`]) {
+        headerSubtitle.textContent = TRANSLATIONS[lang][`tab_sub_${tabId}`];
+    }
+
+    if (tabId === 'dashboard') {
+        updateDashboard();
+    } else if (tabId === 'history') {
+        renderHistory();
+    }
+}
+
+function initLanguage() {
+    const saved = localStorage.getItem('staicumine_lang');
+    if (saved === 'ro' || saved === 'en') {
+        setLanguage(saved);
+    } else if (navigator.language && navigator.language.startsWith('en')) {
+        setLanguage('en');
+    } else {
+        setLanguage('ro');
+    }
+}
+
 // State Management
 let moodEntries = [];
 let safetyPlan = {
@@ -320,29 +569,21 @@ function switchTab(tabId, skipReset = false) {
     const headerTitle = document.getElementById('header-title');
     const headerSubtitle = document.getElementById('header-subtitle');
     
+    if (headerTitle && TRANSLATIONS[currentLanguage] && TRANSLATIONS[currentLanguage][`tab_title_${tabId}`]) {
+        headerTitle.textContent = TRANSLATIONS[currentLanguage][`tab_title_${tabId}`];
+    }
+    if (headerSubtitle && TRANSLATIONS[currentLanguage] && TRANSLATIONS[currentLanguage][`tab_sub_${tabId}`]) {
+        headerSubtitle.textContent = TRANSLATIONS[currentLanguage][`tab_sub_${tabId}`];
+    }
+    
     if (tabId === 'dashboard') {
-        headerTitle.textContent = "Acasă";
-        headerSubtitle.textContent = "Monitorizează-ți starea. Înțelege-ți tiparele.";
         updateDashboard();
     } else if (tabId === 'log') {
-        headerTitle.textContent = "Check-in";
-        headerSubtitle.textContent = "Urmărește-ți dispoziția, somnul și factorii care îți influențează starea.";
         if (!skipReset) {
             resetLogForm();
         }
     } else if (tabId === 'history') {
-        headerTitle.textContent = "Istoric";
-        headerSubtitle.textContent = "Revizuiește toate înregistrările tale și observă dinamica emoțională.";
         renderHistory();
-    } else if (tabId === 'safety') {
-        headerTitle.textContent = "Plan de siguranță";
-        headerSubtitle.textContent = "Strategii personale și resurse de suport în caz de criză.";
-    } else if (tabId === 'settings') {
-        headerTitle.textContent = "Date & setări";
-        headerSubtitle.textContent = "Exportă, importă sau șterge datele stocate exclusiv în browser.";
-    } else if (tabId === 'guides') {
-        headerTitle.textContent = "Resurse";
-        headerSubtitle.textContent = "Recomandări bazate pe dovezi științifice pentru calmarea anxietății, somn odihnitor și echilibru emotiv.";
     }
 }
 
@@ -2014,6 +2255,7 @@ function autoExpandTextarea(textarea) {
 
 // On Application Init Load
 window.addEventListener('DOMContentLoaded', () => {
+    initLanguage();
     loadData();
     resetLogForm();
     updateDashboard();
