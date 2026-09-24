@@ -548,6 +548,13 @@ function switchTab(tabId, skipReset = false) {
     // Always close mobile sandwich menu when a tab is selected
     closeMobileMenu();
 
+    // Dismiss welcome modal if open when user navigates
+    const welcomeModal = document.getElementById('welcome-modal');
+    if (welcomeModal && welcomeModal.style.display !== 'none') {
+        welcomeModal.style.display = 'none';
+        localStorage.setItem('staicumine_initialized', 'true');
+    }
+
     // If leaving safety tab, stop breathing exercise
     if (tabId !== 'safety') {
         stopBreathingIfRunning();

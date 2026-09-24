@@ -140,6 +140,7 @@
     <!-- First Time Welcome Modal (Fresh Journal vs Demo Choice) -->
     <div id="welcome-modal" class="modal-backdrop" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="welcome-modal-title">
         <div class="modal-box welcome-modal-box">
+            <button class="modal-close-btn" onclick="startFreshJournal()" aria-label="Închide">&times;</button>
             <div class="welcome-header">
                 <div class="welcome-logo-badge">🌿</div>
                 <h2 id="welcome-modal-title">Bun venit la Staicumine 👋</h2>
@@ -803,7 +804,6 @@
                         <div class="form-actions">
                             <button type="submit" class="action-btn-primary submit-btn" data-i18n="submit_btn_save">Salvează check-in-ul</button>
                             <button type="button" class="action-btn-secondary" onclick="switchTab('dashboard')" data-i18n="btn_cancel">Renunță</button>
-                        </div>
                         </div>
 
                     </form>
