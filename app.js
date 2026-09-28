@@ -209,7 +209,97 @@ const TRANSLATIONS = {
         energy_moderate: "Moderată",
         energy_low: "Scăzută",
         energy_very_low: "Foarte scăzută",
-        draft_saved_notice: "💾 Draft salvat automat"
+        draft_saved_notice: "💾 Draft salvat automat",
+
+        // Safety Plan (/html/body/div[7]/main/section[3] #view-safety)
+        safety_header_title: "Plan de Siguranță & Prevenire a Crizei",
+        safety_header_desc: "Acest plan este salvat doar în browserul tău. Completează-l pentru a-l avea la îndemână în momentele dificile. În caz de urgență majoră, apelează imediat serviciile de urgență.",
+        safety_crisis_lines_title: "Linii Naționale de Criză (România)",
+        safety_line_112_title: "112 - Serviciul de Urgență",
+        safety_line_112_desc: "Pentru amenințări imediate la adresa vieții sau siguranței fizice.",
+        safety_line_112_btn: "Sună 112",
+        safety_line_depre_title: "0374 456 420 - Depre Hub Helpline",
+        safety_line_depre_desc: "Suport emoțional gratuit, disponibil 24/7 pentru anxietate, atac de panică și depresie.",
+        safety_line_depre_btn: "Sună Helpline",
+        safety_line_antisuicide_title: "0800 801 200 - Linia Verde Antisuicide",
+        safety_line_antisuicide_desc: "Alianța Română de Prevenție a Suicidului (ore specifice / suport gratuit).",
+        safety_line_antisuicide_btn: "Sună Alianța",
+
+        safety_contacts_title: "Persoane de Contact de Încredere",
+        safety_doc_label: "Medic Psihiatru (Nume & Telefon)",
+        safety_doc_ph: "Dr. Andrei Popescu - 07xx xxx xxx",
+        safety_therapist_label: "Psiholog / Terapeut",
+        safety_therapist_ph: "Ioana Ionescu - 07xx xxx xxx",
+        safety_emergency_label: "Prieten de încredere / Membru familie",
+        safety_emergency_ph: "Mama / Partener - 07xx xxx xxx",
+        safety_save_contacts_btn: "Salvează Contactele",
+
+        safety_strategies_title: "Strategii de Calmare & Coping",
+        safety_triggers_label: "Semnale de alarmă (Triggers / Schimbări de comportament):",
+        safety_triggers_ph: "Ex: Nu mai pot dormi, devin extrem de iritabil, vorbesc foarte repede.",
+        safety_coping_label: "Măsuri rapide de calmare (Ce funcționează pentru mine):",
+        safety_coping_ph: "Ex: Exercițiul de respirație 4-7-8, ascult playlist-ul de relaxare, merg la o plimbare scurtă fără telefon.",
+        safety_save_strategies_btn: "Salvează Strategiile",
+
+        safety_breathing_title: "Respirație Ghidată (Metoda 4-7-8)",
+        safety_breathing_badge: "⏱ 2 minute",
+        safety_breathing_when: "Când să o folosești:",
+        safety_breathing_pill1: "• Anxietate & Panică",
+        safety_breathing_pill2: "• Tensiune & Agitație",
+        safety_breathing_pill3: "• Înainte de somn",
+        safety_breathing_start_btn: "🫁 Începe exercițiul",
+        safety_breathing_stop_btn: "Oprește Respirația",
+        safety_breathing_ready: "Pregătit?",
+        safety_breathing_inhale: "Inspiră adânc...",
+        safety_breathing_hold: "Menține aerul...",
+        safety_breathing_exhale: "Expiră lent pe gură...",
+        safety_breathing_theory_title: "Cum funcționează & Pași tehnici",
+        safety_breathing_theory_desc: "Tehnica 4-7-8 stimulează nervul vag și activează sistemul nervos parasimpatic, scăzând ritmul cardiac și tensiunea arterială în aproximativ 120 de secunde.",
+        safety_breathing_step1: "Inspiră pe nas (4 secunde)",
+        safety_breathing_step2: "Menține aerul (7 secunde)",
+        safety_breathing_step3: "Expiră lent pe gură (8 secunde)",
+
+        safety_sugg_section_title: "Tehnici & Exerciții Rapide de Calmare",
+        safety_sugg_section_desc: "Fiecare tehnică pune acțiunea pe primul loc. Apasă butonul de acțiune directă pentru a începe sau a adăuga tehnica în planul tău.",
+        safety_sugg1_title: "Tehnica 5-4-3-2-1 de Împământare",
+        safety_sugg1_badge: "⏱ 3 minute • Anxietate / Panică",
+        safety_sugg_add_btn: "+ Adaugă la plan",
+        safety_sugg_when_label: "Când să o folosești:",
+        safety_sugg1_when: "Când te simți copleșit de gânduri de panică sau disociere.",
+        safety_sugg_steps_label: "Pași:",
+        safety_sugg1_steps: "Numește cu voce tare: 5 lucruri pe care le vezi, 4 pe care le poți atinge, 3 pe care le auzi, 2 pe care le miroși, 1 pe care îl guști.",
+        safety_sugg1_add_content: "Tehnica 5-4-3-2-1: Numește 5 lucruri pe care le vezi, 4 pe care le atingi, 3 pe care le auzi, 2 pe care le miroși, 1 pe care îl guști.",
+        safety_sugg2_title: "Descărcare Fizică & Distragere",
+        safety_sugg2_badge: "⏱ 3 minute • Iritabilitate / Furie",
+        safety_sugg2_when: "Pentru exces de energie mentală sau agitație iritabilă.",
+        safety_sugg2_steps: "Scrie gândurile furioase pe o foaie și rupe-o, fă 10 genuflexiuni rapide sau dansează energic timp de 3 minute.",
+        safety_sugg2_add_content: "Descărcare Fizică: Scrie gândurile furioase și rupe foaia, 10 genuflexiuni rapide, mișcare pe muzică energică.",
+
+        // Safety Toasts & Feedback
+        toast_safety_contacts_saved: "Contactele de încredere au fost salvate.",
+        toast_safety_strategies_saved: "Strategiile de coping au fost salvate.",
+        toast_suggestion_added: "Sugestia a fost adăugată la strategiile tale de calmare.",
+        toast_suggestion_exists: "Această sugestie este deja în planul tău.",
+        breathing_toast_started: "Exercițiul de respirație a început. Urmărește instrucțiunile.",
+        breathing_toast_stopped: "Exercițiul de respirație a fost oprit.",
+
+        // Crisis Help Modal
+        crisis_modal_badge: "🆘 SUPORT IMEDIAT",
+        crisis_modal_title: "Am nevoie de ajutor",
+        crisis_modal_sub: "Ești în siguranță. Iată resursele tale rapide pentru acest moment.",
+        crisis_trust_card_title: "Persoană de încredere",
+        crisis_trust_not_set: "Neconfigurată în Planul de Siguranță",
+        crisis_trust_call_btn: "📞 Sună acum",
+        crisis_helpline_title: "Resurse de urgență 24/7 (România)",
+        crisis_helpline_sub: "Linii telefonice gratuite și confidențiale",
+        crisis_line_112_label: "Serviciul Național de Urgență",
+        crisis_call_112_btn: "Sună 112 →",
+        crisis_line_suicide_label: "Alianța Română de Prevenție a Suicidului (24/7)",
+        crisis_call_btn: "Sună →",
+        crisis_line_depre_label: "DepreHUB — Suport Anxietate & Depresie",
+        crisis_exercise_title: "Exercițiu de calmare (Respirație 4-7-8)",
+        crisis_exercise_sub: "Scade ritmul cardiac și atenuează anxietatea în 2 minute.",
+        crisis_exercise_btn: "🫁 Începe Respirația Ghidată"
     },
     en: {
         app_title: "Staicumine",
@@ -416,7 +506,97 @@ const TRANSLATIONS = {
         energy_moderate: "Moderate",
         energy_low: "Low",
         energy_very_low: "Very low",
-        draft_saved_notice: "💾 Draft saved automatically"
+        draft_saved_notice: "💾 Draft saved automatically",
+
+        // Safety Plan (/html/body/div[7]/main/section[3] #view-safety)
+        safety_header_title: "Safety & Crisis Prevention Plan",
+        safety_header_desc: "This plan is stored only in your browser. Fill it in to have it on hand during difficult times. In case of a major emergency, call emergency services immediately.",
+        safety_crisis_lines_title: "National Crisis Lines (Romania)",
+        safety_line_112_title: "112 - Emergency Services",
+        safety_line_112_desc: "For immediate threats to life or physical safety.",
+        safety_line_112_btn: "Call 112",
+        safety_line_depre_title: "0374 456 420 - Depre Hub Helpline",
+        safety_line_depre_desc: "Free 24/7 emotional support for anxiety, panic attacks, and depression.",
+        safety_line_depre_btn: "Call Helpline",
+        safety_line_antisuicide_title: "0800 801 200 - Suicide Prevention Lifeline",
+        safety_line_antisuicide_desc: "Romanian Alliance for Suicide Prevention (specific hours / free support).",
+        safety_line_antisuicide_btn: "Call Lifeline",
+
+        safety_contacts_title: "Trusted Contacts",
+        safety_doc_label: "Psychiatrist (Name & Phone)",
+        safety_doc_ph: "Dr. Andrei Popescu - 07xx xxx xxx",
+        safety_therapist_label: "Psychologist / Therapist",
+        safety_therapist_ph: "Ioana Ionescu - 07xx xxx xxx",
+        safety_emergency_label: "Trusted Friend / Family Member",
+        safety_emergency_ph: "Mom / Partner - 07xx xxx xxx",
+        safety_save_contacts_btn: "Save Contacts",
+
+        safety_strategies_title: "Calming & Coping Strategies",
+        safety_triggers_label: "Warning Signs (Triggers / Behavioral Changes):",
+        safety_triggers_ph: "E.g.: Can't sleep, feeling extremely irritable, talking very fast.",
+        safety_coping_label: "Quick Calming Measures (What works for me):",
+        safety_coping_ph: "E.g.: 4-7-8 breathing exercise, listening to calm playlist, short walk without phone.",
+        safety_save_strategies_btn: "Save Strategies",
+
+        safety_breathing_title: "Guided Breathing (4-7-8 Method)",
+        safety_breathing_badge: "⏱ 2 minutes",
+        safety_breathing_when: "When to use it:",
+        safety_breathing_pill1: "• Anxiety & Panic",
+        safety_breathing_pill2: "• Tension & Agitation",
+        safety_breathing_pill3: "• Before sleep",
+        safety_breathing_start_btn: "🫁 Start Exercise",
+        safety_breathing_stop_btn: "Stop Exercise",
+        safety_breathing_ready: "Ready?",
+        safety_breathing_inhale: "Inhale deeply...",
+        safety_breathing_hold: "Hold breath...",
+        safety_breathing_exhale: "Exhale slowly through mouth...",
+        safety_breathing_theory_title: "How It Works & Technical Steps",
+        safety_breathing_theory_desc: "The 4-7-8 technique stimulates the vagus nerve and activates the parasympathetic nervous system, lowering heart rate and blood pressure in about 120 seconds.",
+        safety_breathing_step1: "Inhale through nose (4 seconds)",
+        safety_breathing_step2: "Hold your breath (7 seconds)",
+        safety_breathing_step3: "Exhale slowly through mouth (8 seconds)",
+
+        safety_sugg_section_title: "Quick Calming Techniques & Exercises",
+        safety_sugg_section_desc: "Each technique puts action first. Click the direct action button to begin or add the technique to your plan.",
+        safety_sugg1_title: "5-4-3-2-1 Grounding Technique",
+        safety_sugg1_badge: "⏱ 3 minutes • Anxiety / Panic",
+        safety_sugg_add_btn: "+ Add to Plan",
+        safety_sugg_when_label: "When to use it:",
+        safety_sugg1_when: "When feeling overwhelmed by panic thoughts or dissociation.",
+        safety_sugg_steps_label: "Steps:",
+        safety_sugg1_steps: "Name out loud: 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, 1 you can taste.",
+        safety_sugg1_add_content: "5-4-3-2-1 Technique: Name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste.",
+        safety_sugg2_title: "Physical Release & Distraction",
+        safety_sugg2_badge: "⏱ 3 minutes • Irritability / Anger",
+        safety_sugg2_when: "For excess mental energy or irritable agitation.",
+        safety_sugg2_steps: "Write angry thoughts on a sheet of paper and tear it up, do 10 quick squats, or dance vigorously for 3 minutes.",
+        safety_sugg2_add_content: "Physical Release: Write angry thoughts and tear the sheet, 10 quick squats, move to upbeat music.",
+
+        // Safety Toasts & Feedback
+        toast_safety_contacts_saved: "Trusted contacts have been saved.",
+        toast_safety_strategies_saved: "Coping strategies have been saved.",
+        toast_suggestion_added: "Suggestion was added to your calming strategies.",
+        toast_suggestion_exists: "This suggestion is already in your plan.",
+        breathing_toast_started: "Breathing exercise started. Follow instructions.",
+        breathing_toast_stopped: "Breathing exercise was stopped.",
+
+        // Crisis Help Modal
+        crisis_modal_badge: "🆘 IMMEDIATE SUPPORT",
+        crisis_modal_title: "I Need Help",
+        crisis_modal_sub: "You are safe. Here are your quick resources for this moment.",
+        crisis_trust_card_title: "Trusted Person",
+        crisis_trust_not_set: "Not configured in Safety Plan",
+        crisis_trust_call_btn: "📞 Call Now",
+        crisis_helpline_title: "24/7 Emergency Resources (Romania)",
+        crisis_helpline_sub: "Free and confidential phone hotlines",
+        crisis_line_112_label: "National Emergency Service",
+        crisis_call_112_btn: "Call 112 →",
+        crisis_line_suicide_label: "Romanian Suicide Prevention Alliance (24/7)",
+        crisis_call_btn: "Call →",
+        crisis_line_depre_label: "DepreHUB — Anxiety & Depression Support",
+        crisis_exercise_title: "Calming Exercise (4-7-8 Breathing)",
+        crisis_exercise_sub: "Lowers heart rate and eases anxiety in 2 minutes.",
+        crisis_exercise_btn: "🫁 Start Guided Breathing"
     }
 };
 
@@ -483,6 +663,26 @@ function setLanguage(lang) {
     const journalNotes = document.getElementById('journal-notes');
     if (journalNotes) {
         journalNotes.placeholder = t('journal_notes_placeholder');
+    }
+
+    // Update Safety Plan input placeholders
+    const safetyDoc = document.getElementById('safety-doc-name');
+    if (safetyDoc) safetyDoc.placeholder = t('safety_doc_ph');
+    const safetyTherapist = document.getElementById('safety-therapist-name');
+    if (safetyTherapist) safetyTherapist.placeholder = t('safety_therapist_ph');
+    const safetyEmergency = document.getElementById('safety-emergency-name');
+    if (safetyEmergency) safetyEmergency.placeholder = t('safety_emergency_ph');
+    const safetyTriggers = document.getElementById('safety-triggers');
+    if (safetyTriggers) safetyTriggers.placeholder = t('safety_triggers_ph');
+    const safetyCoping = document.getElementById('safety-coping');
+    if (safetyCoping) safetyCoping.placeholder = t('safety_coping_ph');
+
+    // Update breathing exercise button and instruction if idle
+    if (typeof isBreathingRunning !== 'undefined' && !isBreathingRunning) {
+        const breathingBtn = document.getElementById('breathing-start-btn');
+        if (breathingBtn) breathingBtn.textContent = t('safety_breathing_start_btn');
+        const breathingInstruction = document.getElementById('breathing-instruction');
+        if (breathingInstruction) breathingInstruction.textContent = t('safety_breathing_ready');
     }
 
     // Refresh slider values in current language
@@ -1237,7 +1437,7 @@ function saveSafetyPlan(event) {
     safetyPlan.emergencyName = document.getElementById('safety-emergency-name').value.trim();
     
     localStorage.setItem('staicumine_safety_plan', JSON.stringify(safetyPlan));
-    showToast("Contactele de încredere au fost salvate.");
+    showToast(t('toast_safety_contacts_saved'));
 }
 
 // Save Safety Plan Coping strategies
@@ -1247,7 +1447,7 @@ function saveSafetyStrategies(event) {
     safetyPlan.coping = document.getElementById('safety-coping').value.trim();
     
     localStorage.setItem('staicumine_safety_plan', JSON.stringify(safetyPlan));
-    showToast("Strategiile de coping au fost salvate.");
+    showToast(t('toast_safety_strategies_saved'));
 }
 
 // Render Hero Card based on user check-in lifecycle state
@@ -2609,26 +2809,27 @@ function toggleSuggestionDetail(id) {
 }
 
 // Add Suggestion Text to Personal Coping strategies Textarea
-function addSuggestionToCoping(text) {
+function addSuggestionToCoping(keyOrText) {
     const copingTextarea = document.getElementById('safety-coping');
     if (!copingTextarea) return;
 
+    const resolvedText = t(keyOrText);
     const currentVal = copingTextarea.value.trim();
     if (currentVal === '') {
-        copingTextarea.value = text;
+        copingTextarea.value = resolvedText;
     } else {
         // Check if suggestion already exists to avoid duplicate spamming
-        if (currentVal.includes(text)) {
-            showToast("Această sugestie este deja în planul tău.");
+        if (currentVal.includes(resolvedText)) {
+            showToast(t('toast_suggestion_exists'));
             return;
         }
-        copingTextarea.value = currentVal + "\n\n" + text;
+        copingTextarea.value = currentVal + "\n\n" + resolvedText;
     }
 
     // Trigger local state update and save
     safetyPlan.coping = copingTextarea.value;
     localStorage.setItem('staicumine_safety_plan', JSON.stringify(safetyPlan));
-    showToast("Sugestia a fost adăugată la strategiile tale de calmare.");
+    showToast(t('toast_suggestion_added'));
 }
 
 // Interactive Breathing Exercise State Variables
@@ -2649,10 +2850,10 @@ function toggleBreathingExercise() {
     } else {
         // Start exercise
         isBreathingRunning = true;
-        btn.textContent = 'Oprește Respirația';
+        btn.textContent = t('safety_breathing_stop_btn');
         btn.classList.remove('action-btn-primary');
         btn.classList.add('action-btn-danger');
-        showToast("Exercițiul de respirație a început. Urmărește instrucțiunile.");
+        showToast(t('breathing_toast_started'));
 
         runBreathingCycle(circle, instruction, timerText);
     }
@@ -2672,13 +2873,13 @@ function stopBreathingIfRunning() {
     
     if (circle && instruction && timerText && btn) {
         circle.className = 'breathing-circle';
-        instruction.textContent = 'Pregătit?';
+        instruction.textContent = t('safety_breathing_ready');
         timerText.textContent = '';
-        btn.textContent = 'Începe Respirația';
+        btn.textContent = t('safety_breathing_start_btn');
         btn.classList.remove('action-btn-danger');
         btn.classList.add('action-btn-primary');
     }
-    showToast("Exercițiul de respirație a fost oprit.");
+    showToast(t('breathing_toast_stopped'));
 }
 
 function runBreathingCycle(circle, instruction, timerText) {
@@ -2690,11 +2891,11 @@ function runBreathingCycle(circle, instruction, timerText) {
         timerText.textContent = timerValue;
         
         if (currentState === 'inhale') {
-            instruction.textContent = 'Inspiră adânc...';
+            instruction.textContent = t('safety_breathing_inhale');
         } else if (currentState === 'hold') {
-            instruction.textContent = 'Menține aerul...';
+            instruction.textContent = t('safety_breathing_hold');
         } else if (currentState === 'exhale') {
-            instruction.textContent = 'Expiră lent pe gură...';
+            instruction.textContent = t('safety_breathing_exhale');
         }
     };
 
@@ -2746,10 +2947,10 @@ function openCrisisHelpModal() {
             phoneLink.onclick = null;
         }
     } else {
-        if (nameEl) nameEl.textContent = "Neconfigurată în Planul de Siguranță.";
+        if (nameEl) nameEl.textContent = t('crisis_trust_not_set');
         if (phoneLink) {
             phoneLink.href = "#";
-            phoneLink.textContent = "⚙️ Configurează în Plan";
+            phoneLink.textContent = currentLanguage === 'en' ? "⚙️ Configure in Safety Plan" : "⚙️ Configurează în Plan";
             phoneLink.onclick = (e) => {
                 e.preventDefault();
                 closeCrisisHelpModal();

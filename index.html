@@ -817,73 +817,73 @@
                     <div class="safety-header glass warning-border">
                         <div class="warning-icon">⚠️</div>
                         <div class="warning-content">
-                            <h3>Plan de Siguranță & Prevenire a Crizei</h3>
-                            <p>Acest plan este salvat doar în browserul tău. Completează-l pentru a-l avea la îndemână în momentele dificile. În caz de urgență majoră, apelează imediat serviciile de urgență.</p>
+                            <h3 data-i18n="safety_header_title">Plan de Siguranță & Prevenire a Crizei</h3>
+                            <p data-i18n="safety_header_desc">Acest plan este salvat doar în browserul tău. Completează-l pentru a-l avea la îndemână în momentele dificile. În caz de urgență majoră, apelează imediat serviciile de urgență.</p>
                         </div>
                     </div>
 
                     <div class="safety-grid">
                         <!-- Standard Emergency Lines (Read Only / Dynamic) -->
                         <div class="safety-card glass col-2">
-                            <h3>Linii Naționale de Criză (România)</h3>
+                            <h3 data-i18n="safety_crisis_lines_title">Linii Naționale de Criză (România)</h3>
                             <div class="crisis-contacts-list">
                                 <div class="crisis-contact-item">
                                     <div class="crisis-info">
-                                        <h4>112 - Serviciul de Urgență</h4>
-                                        <p>Pentru amenințări imediate la adresa vieții sau siguranței fizice.</p>
+                                        <h4 data-i18n="safety_line_112_title">112 - Serviciul de Urgență</h4>
+                                        <p data-i18n="safety_line_112_desc">Pentru amenințări imediate la adresa vieții sau siguranței fizice.</p>
                                     </div>
-                                    <a href="tel:112" class="call-btn btn-danger">Sună 112</a>
+                                    <a href="tel:112" class="call-btn btn-danger" data-i18n="safety_line_112_btn">Sună 112</a>
                                 </div>
                                 <div class="crisis-contact-item">
                                     <div class="crisis-info">
-                                        <h4>0374 456 420 - Depre Hub Helpline</h4>
-                                        <p>Suport emoțional gratuit, disponibil 24/7 pentru anxietate, atac de panică și depresie.</p>
+                                        <h4 data-i18n="safety_line_depre_title">0374 456 420 - Depre Hub Helpline</h4>
+                                        <p data-i18n="safety_line_depre_desc">Suport emoțional gratuit, disponibil 24/7 pentru anxietate, atac de panică și depresie.</p>
                                     </div>
-                                    <a href="tel:0374456420" class="call-btn btn-primary">Sună Helpline</a>
+                                    <a href="tel:0374456420" class="call-btn btn-primary" data-i18n="safety_line_depre_btn">Sună Helpline</a>
                                 </div>
                                 <div class="crisis-contact-item">
                                     <div class="crisis-info">
-                                        <h4>0800 801 200 - Linia Verde Antisuicide</h4>
-                                        <p>Alianța Română de Prevenție a Suicidului (ore specifice / suport gratuit).</p>
+                                        <h4 data-i18n="safety_line_antisuicide_title">0800 801 200 - Linia Verde Antisuicide</h4>
+                                        <p data-i18n="safety_line_antisuicide_desc">Alianța Română de Prevenție a Suicidului (ore specifice / suport gratuit).</p>
                                     </div>
-                                    <a href="tel:0800801200" class="call-btn btn-primary">Sună Alianța</a>
+                                    <a href="tel:0800801200" class="call-btn btn-primary" data-i18n="safety_line_antisuicide_btn">Sună Alianța</a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Editable Personal Contacts -->
                         <div class="safety-card glass">
-                            <h3>Persoane de Contact de Încredere</h3>
+                            <h3 data-i18n="safety_contacts_title">Persoane de Contact de Încredere</h3>
                             <form id="safety-contacts-form" onsubmit="saveSafetyPlan(event)">
                                 <div class="form-group">
-                                    <label for="safety-doc-name">Medic Psihiatru (Nume & Telefon)</label>
+                                    <label for="safety-doc-name" data-i18n="safety_doc_label">Medic Psihiatru (Nume & Telefon)</label>
                                     <input type="text" id="safety-doc-name" placeholder="Dr. Andrei Popescu - 07xx xxx xxx">
                                 </div>
                                 <div class="form-group">
-                                    <label for="safety-therapist-name">Psiholog / Terapeut</label>
+                                    <label for="safety-therapist-name" data-i18n="safety_therapist_label">Psiholog / Terapeut</label>
                                     <input type="text" id="safety-therapist-name" placeholder="Ioana Ionescu - 07xx xxx xxx">
                                 </div>
                                 <div class="form-group">
-                                    <label for="safety-emergency-name">Prieten de încredere / Membru familie</label>
+                                    <label for="safety-emergency-name" data-i18n="safety_emergency_label">Prieten de încredere / Membru familie</label>
                                     <input type="text" id="safety-emergency-name" placeholder="Mama / Partener - 07xx xxx xxx">
                                 </div>
-                                <button type="submit" class="action-btn-primary btn-sm">Salvează Contactele</button>
+                                <button type="submit" class="action-btn-primary btn-sm" data-i18n="safety_save_contacts_btn">Salvează Contactele</button>
                             </form>
                         </div>
 
                         <!-- Coping Strategies -->
                         <div class="safety-card glass">
-                            <h3>Strategii de Calmare & Coping</h3>
+                            <h3 data-i18n="safety_strategies_title">Strategii de Calmare & Coping</h3>
                             <form id="safety-strategies-form" onsubmit="saveSafetyStrategies(event)">
                                 <div class="form-group">
-                                    <label for="safety-triggers">Semnale de alarmă (Triggers / Schimbări de comportament):</label>
+                                    <label for="safety-triggers" data-i18n="safety_triggers_label">Semnale de alarmă (Triggers / Schimbări de comportament):</label>
                                     <textarea id="safety-triggers" rows="2" placeholder="Ex: Nu mai pot dormi, devin extrem de iritabil, vorbesc foarte repede."></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="safety-coping">Măsuri rapide de calmare (Ce funcționează pentru mine):</label>
+                                    <label for="safety-coping" data-i18n="safety_coping_label">Măsuri rapide de calmare (Ce funcționează pentru mine):</label>
                                     <textarea id="safety-coping" rows="4" placeholder="Ex: Exercițiul de respirație 4-7-8, ascult playlist-ul de relaxare, merg la o plimbare scurtă fără telefon."></textarea>
                                 </div>
-                                <button type="submit" class="action-btn-primary btn-sm">Salvează Strategiile</button>
+                                <button type="submit" class="action-btn-primary btn-sm" data-i18n="safety_save_strategies_btn">Salvează Strategiile</button>
                             </form>
                         </div>
 
@@ -891,21 +891,21 @@
                         <div class="safety-card glass col-2 actionable-guide-card">
                             <div class="guide-top-box">
                                 <div class="guide-title-row">
-                                    <h3>Respirație Ghidată (Metoda 4-7-8)</h3>
-                                    <span class="guide-duration-badge">⏱ 2 minute</span>
+                                    <h3 data-i18n="safety_breathing_title">Respirație Ghidată (Metoda 4-7-8)</h3>
+                                    <span class="guide-duration-badge" data-i18n="safety_breathing_badge">⏱ 2 minute</span>
                                 </div>
 
                                 <div class="guide-use-cases">
-                                    <span class="use-case-title">Când să o folosești:</span>
+                                    <span class="use-case-title" data-i18n="safety_breathing_when">Când să o folosești:</span>
                                     <div class="use-case-pills">
-                                        <span class="use-case-pill">• Anxietate & Panică</span>
-                                        <span class="use-case-pill">• Tensiune & Agitație</span>
-                                        <span class="use-case-pill">• Înainte de somn</span>
+                                        <span class="use-case-pill" data-i18n="safety_breathing_pill1">• Anxietate & Panică</span>
+                                        <span class="use-case-pill" data-i18n="safety_breathing_pill2">• Tensiune & Agitație</span>
+                                        <span class="use-case-pill" data-i18n="safety_breathing_pill3">• Înainte de somn</span>
                                     </div>
                                 </div>
 
                                 <div class="guide-primary-action">
-                                    <button type="button" id="breathing-start-btn" class="action-btn-primary btn-lg" onclick="toggleBreathingExercise()">
+                                    <button type="button" id="breathing-start-btn" class="action-btn-primary btn-lg" onclick="toggleBreathingExercise()" data-i18n="safety_breathing_start_btn">
                                         🫁 Începe exercițiul
                                     </button>
                                 </div>
@@ -914,7 +914,7 @@
                             <div class="breathing-container" id="breathing-widget-container">
                                 <div class="breathing-circle-wrapper">
                                     <div id="breathing-circle" class="breathing-circle">
-                                        <span id="breathing-instruction">Pregătit?</span>
+                                        <span id="breathing-instruction" data-i18n="safety_breathing_ready">Pregătit?</span>
                                         <span id="breathing-timer" class="breathing-timer"></span>
                                     </div>
                                 </div>
@@ -923,20 +923,20 @@
                             <div class="guide-divider"></div>
 
                             <div class="guide-theory-box">
-                                <h4 class="theory-subtitle">Cum funcționează & Pași tehnici</h4>
-                                <p class="theory-desc">Tehnica 4-7-8 stimulează nervul vag și activează sistemul nervos parasimpatic, scăzând ritmul cardiac și tensiunea arterială în aproximativ 120 de secunde.</p>
+                                <h4 class="theory-subtitle" data-i18n="safety_breathing_theory_title">Cum funcționează & Pași tehnici</h4>
+                                <p class="theory-desc" data-i18n="safety_breathing_theory_desc">Tehnica 4-7-8 stimulează nervul vag și activează sistemul nervos parasimpatic, scăzând ritmul cardiac și tensiunea arterială în aproximativ 120 de secunde.</p>
                                 <div class="steps-grid">
                                     <div class="step-mini-box">
                                         <span class="step-num">1</span>
-                                        <span class="step-txt">Inspiră pe nas (4 secunde)</span>
+                                        <span class="step-txt" data-i18n="safety_breathing_step1">Inspiră pe nas (4 secunde)</span>
                                     </div>
                                     <div class="step-mini-box">
                                         <span class="step-num">2</span>
-                                        <span class="step-txt">Menține aerul (7 secunde)</span>
+                                        <span class="step-txt" data-i18n="safety_breathing_step2">Menține aerul (7 secunde)</span>
                                     </div>
                                     <div class="step-mini-box">
                                         <span class="step-num">3</span>
-                                        <span class="step-txt">Expiră lent pe gură (8 secunde)</span>
+                                        <span class="step-txt" data-i18n="safety_breathing_step3">Expiră lent pe gură (8 secunde)</span>
                                     </div>
                                 </div>
                             </div>
@@ -944,41 +944,41 @@
 
                         <!-- Action-First Coping Suggestions -->
                         <div class="safety-card glass col-2">
-                            <h3>Tehnici & Exerciții Rapide de Calmare</h3>
-                            <p class="section-desc">Fiecare tehnică pune acțiunea pe primul loc. Apasă butonul de acțiune directă pentru a începe sau a adăuga tehnica în planul tău.</p>
+                            <h3 data-i18n="safety_sugg_section_title">Tehnici & Exerciții Rapide de Calmare</h3>
+                            <p class="section-desc" data-i18n="safety_sugg_section_desc">Fiecare tehnică pune acțiunea pe primul loc. Apasă butonul de acțiune directă pentru a începe sau a adăuga tehnica în planul tău.</p>
                             
                             <div class="suggestions-actionable-list">
                                 <div class="actionable-sugg-card">
                                     <div class="sugg-top-bar">
                                         <div>
-                                            <h4>Tehnica 5-4-3-2-1 de Împământare</h4>
-                                            <span class="sugg-badge">⏱ 3 minute • Anxietate / Panică</span>
+                                            <h4 data-i18n="safety_sugg1_title">Tehnica 5-4-3-2-1 de Împământare</h4>
+                                            <span class="sugg-badge" data-i18n="safety_sugg1_badge">⏱ 3 minute • Anxietate / Panică</span>
                                         </div>
-                                        <button type="button" class="action-btn-secondary btn-sm" onclick="addSuggestionToCoping('Tehnica 5-4-3-2-1: Numește 5 lucruri pe care le vezi, 4 pe care le atingi, 3 pe care le auzi, 2 pe care le miroși, 1 pe care îl guști.')">+ Adaugă la plan</button>
+                                        <button type="button" class="action-btn-secondary btn-sm" onclick="addSuggestionToCoping('safety_sugg1_add_content')" data-i18n="safety_sugg_add_btn">+ Adaugă la plan</button>
                                     </div>
 
                                     <div class="guide-divider"></div>
 
                                     <div class="sugg-details-body">
-                                        <p><strong>Când să o folosești:</strong> Când te simți copleșit de gânduri de panică sau disociere.</p>
-                                        <p><strong>Pași:</strong> Numește cu voce tare: 5 lucruri pe care le vezi, 4 pe care le poți atinge, 3 pe care le auzi, 2 pe care le miroși, 1 pe care îl guști.</p>
+                                        <p><strong data-i18n="safety_sugg_when_label">Când să o folosești:</strong> <span data-i18n="safety_sugg1_when">Când te simți copleșit de gânduri de panică sau disociere.</span></p>
+                                        <p><strong data-i18n="safety_sugg_steps_label">Pași:</strong> <span data-i18n="safety_sugg1_steps">Numește cu voce tare: 5 lucruri pe care le vezi, 4 pe care le poți atinge, 3 pe care le auzi, 2 pe care le miroși, 1 pe care îl guști.</span></p>
                                     </div>
                                 </div>
 
                                 <div class="actionable-sugg-card">
                                     <div class="sugg-top-bar">
                                         <div>
-                                            <h4>Descărcare Fizică & Distragere</h4>
-                                            <span class="sugg-badge">⏱ 3 minute • Iritabilitate / Furie</span>
+                                            <h4 data-i18n="safety_sugg2_title">Descărcare Fizică & Distragere</h4>
+                                            <span class="sugg-badge" data-i18n="safety_sugg2_badge">⏱ 3 minute • Iritabilitate / Furie</span>
                                         </div>
-                                        <button type="button" class="action-btn-secondary btn-sm" onclick="addSuggestionToCoping('Descărcare Fizică: Scrie gândurile furioase și rupe foaia, 10 genuflexiuni rapide, mișcare pe muzică energică.')">+ Adaugă la plan</button>
+                                        <button type="button" class="action-btn-secondary btn-sm" onclick="addSuggestionToCoping('safety_sugg2_add_content')" data-i18n="safety_sugg_add_btn">+ Adaugă la plan</button>
                                     </div>
 
                                     <div class="guide-divider"></div>
 
                                     <div class="sugg-details-body">
-                                        <p><strong>Când să o folosești:</strong> Pentru exces de energie mentală sau agitație iritabilă.</p>
-                                        <p><strong>Pași:</strong> Scrie gândurile furioase pe o foaie și rupe-o, fă 10 genuflexiuni rapide sau dansează energic timp de 3 minute.</p>
+                                        <p><strong data-i18n="safety_sugg_when_label">Când să o folosești:</strong> <span data-i18n="safety_sugg2_when">Pentru exces de energie mentală sau agitație iritabilă.</span></p>
+                                        <p><strong data-i18n="safety_sugg_steps_label">Pași:</strong> <span data-i18n="safety_sugg2_steps">Scrie gândurile furioase pe o foaie și rupe-o, fă 10 genuflexiuni rapide sau dansează energic timp de 3 minute.</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -1240,9 +1240,9 @@
         <div class="modal-content glass-card crisis-modal-card">
             <div class="modal-header crisis-modal-header">
                 <div class="crisis-title-box">
-                    <span class="crisis-badge">🆘 SUPORT IMEDIAT</span>
-                    <h3>Am nevoie de ajutor</h3>
-                    <p class="crisis-sub">Ești în siguranță. Iată resursele tale rapide pentru acest moment.</p>
+                    <span class="crisis-badge" data-i18n="crisis_modal_badge">🆘 SUPORT IMEDIAT</span>
+                    <h3 data-i18n="crisis_modal_title">Am nevoie de ajutor</h3>
+                    <p class="crisis-sub" data-i18n="crisis_modal_sub">Ești în siguranță. Iată resursele tale rapide pentru acest moment.</p>
                 </div>
                 <button class="modal-close-btn" onclick="closeCrisisHelpModal()">&times;</button>
             </div>
@@ -1253,12 +1253,12 @@
                     <div class="crisis-card-header">
                         <span class="crisis-icon">📞</span>
                         <div class="crisis-card-info">
-                            <h4>Persoană de încredere</h4>
-                            <p id="crisis-trust-name">Neconfigurată în Planul de Siguranță</p>
+                            <h4 data-i18n="crisis_trust_card_title">Persoană de încredere</h4>
+                            <p id="crisis-trust-name" data-i18n="crisis_trust_not_set">Neconfigurată în Planul de Siguranță</p>
                         </div>
                     </div>
                     <a id="crisis-trust-phone-link" href="tel:" class="crisis-action-btn phone-btn">
-                        📞 Sună acum
+                        <span data-i18n="crisis_trust_call_btn">📞 Sună acum</span>
                     </a>
                 </div>
 
@@ -1267,31 +1267,31 @@
                     <div class="crisis-card-header">
                         <span class="crisis-icon">🚑</span>
                         <div class="crisis-card-info">
-                            <h4>Resurse de urgență 24/7 (România)</h4>
-                            <p>Linii telefonice gratuite și confidențiale</p>
+                            <h4 data-i18n="crisis_helpline_title">Resurse de urgență 24/7 (România)</h4>
+                            <p data-i18n="crisis_helpline_sub">Linii telefonice gratuite și confidențiale</p>
                         </div>
                     </div>
                     <div class="helplines-list">
                         <a href="tel:112" class="helpline-item danger">
                             <div class="helpline-info">
                                 <span class="helpline-num">112</span>
-                                <span class="helpline-lbl">Serviciul Național de Urgență</span>
+                                <span class="helpline-lbl" data-i18n="crisis_line_112_label">Serviciul Național de Urgență</span>
                             </div>
-                            <span class="call-badge">Sună 112 →</span>
+                            <span class="call-badge" data-i18n="crisis_call_112_btn">Sună 112 →</span>
                         </a>
                         <a href="tel:0800801200" class="helpline-item warning">
                             <div class="helpline-info">
                                 <span class="helpline-num">0800 801 200</span>
-                                <span class="helpline-lbl">Alianța Română de Prevenție a Suicidului (24/7)</span>
+                                <span class="helpline-lbl" data-i18n="crisis_line_suicide_label">Alianța Română de Prevenție a Suicidului (24/7)</span>
                             </div>
-                            <span class="call-badge">Sună →</span>
+                            <span class="call-badge" data-i18n="crisis_call_btn">Sună →</span>
                         </a>
                         <a href="tel:0374200200" class="helpline-item info">
                             <div class="helpline-info">
                                 <span class="helpline-num">0374 200 200</span>
-                                <span class="helpline-lbl">DepreHUB — Suport Anxietate & Depresie</span>
+                                <span class="helpline-lbl" data-i18n="crisis_line_depre_label">DepreHUB — Suport Anxietate & Depresie</span>
                             </div>
-                            <span class="call-badge">Sună →</span>
+                            <span class="call-badge" data-i18n="crisis_call_btn">Sună →</span>
                         </a>
                     </div>
                 </div>
@@ -1301,11 +1301,11 @@
                     <div class="crisis-card-header">
                         <span class="crisis-icon">🫁</span>
                         <div class="crisis-card-info">
-                            <h4>Exercițiu de calmare (Respirație 4-7-8)</h4>
-                            <p>Scade ritmul cardiac și atenuează anxietatea în 2 minute.</p>
+                            <h4 data-i18n="crisis_exercise_title">Exercițiu de calmare (Respirație 4-7-8)</h4>
+                            <p data-i18n="crisis_exercise_sub">Scade ritmul cardiac și atenuează anxietatea în 2 minute.</p>
                         </div>
                     </div>
-                    <button class="crisis-action-btn start-exercise-btn" onclick="startCrisisBreathing()">
+                    <button class="crisis-action-btn start-exercise-btn" onclick="startCrisisBreathing()" data-i18n="crisis_exercise_btn">
                         🫁 Începe Respirația Ghidată
                     </button>
                 </div>
