@@ -44,4 +44,22 @@ test.describe('Staicumine Web App E2E Spec', () => {
     await expect(page.locator('#view-dashboard')).toBeVisible();
   });
 
+  test('Tradu Dashboard-ul și graficul în Română și Engleză', async ({ page }) => {
+    // Test limba Română
+    await page.evaluate(() => setLanguage('ro'));
+    await expect(page.locator('#chart-main-title')).toHaveText('Evoluția dispoziției');
+    await expect(page.locator('.metric-btn[data-metric="mood"]')).toContainText('Dispoziție');
+    await expect(page.locator('#filter-btn-7')).toHaveText('7 Zile');
+
+    // Test limba Engleză
+    await page.evaluate(() => setLanguage('en'));
+    await expect(page.locator('#chart-main-title')).toHaveText('Mood Evolution');
+    await expect(page.locator('.metric-btn[data-metric="mood"]')).toContainText('Mood');
+    await expect(page.locator('#filter-btn-7')).toHaveText('7 Days');
+
+    // Test comutare metrică în Engleză
+    await page.evaluate(() => setChartMetric('sleep'));
+    await expect(page.locator('#chart-main-title')).toHaveText('Sleep Hours');
+  });
+
 });

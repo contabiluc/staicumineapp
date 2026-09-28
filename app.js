@@ -88,7 +88,98 @@ const TRANSLATIONS = {
         symptom_lipsa_concentrare: "Lipsă de concentrare",
         symptom_retragere_sociala: "Retragere socială",
         symptom_atac_panica: "Atac de panică",
-        symptom_impulsivitate: "Impulsivitate"
+        symptom_impulsivitate: "Impulsivitate",
+
+        // Chart container & Metrics (/html/body/div[7]/main/section[1]/div[4])
+        chart_title_mood: "Evoluția dispoziției",
+        chart_sub_mood: "Scară calibrată: -5 (Depresie) la +5 (Manie)",
+        chart_title_sleep: "Ore de somn",
+        chart_sub_sleep: "Scară calibrată: 0 la 16 ore (Zona optimă 6.5h - 9h)",
+        chart_title_anxiety: "Nivel de anxietate",
+        chart_sub_anxiety: "Scară calibrată: 0 (Scăzută) la 10 (Severă)",
+        chart_title_energy: "Nivel de energie",
+        chart_sub_energy: "Scară calibrată: 0 (Scăzută) la 10 (Foarte bună)",
+        chart_title_all: "Toți indicatorii suprapuși",
+        chart_sub_all: "Urmărire comparativă pe scară procentuală normalizată",
+
+        metric_mood: "Dispoziție",
+        metric_sleep: "Somn",
+        metric_anxiety: "Anxietate",
+        metric_energy: "Energie",
+        metric_all: "Toate",
+
+        filter_7_days: "7 Zile",
+        filter_30_days: "30 Zile",
+        filter_90_days: "90 Zile",
+
+        chart_empty_title: "Începe să-ți urmărești evoluția",
+        chart_empty_desc: "Completează primul check-in pentru a vedea aici evoluția dispoziției, somnului și anxietății.",
+        chart_empty_cta: "Fă primul check-in",
+
+        legend_mood: "Dispoziție (-5 la +5)",
+        legend_stability: "Linia de Stabilitate (0)",
+        legend_sleep: "Ore Somn (0-16h)",
+        legend_sleep_optimal: "Zona optimă de somn (6.5h - 9h)",
+        legend_anxiety: "Anxietate (0-10)",
+        legend_comfort_zone: "Zona de confort (0-3)",
+        legend_energy: "Energie (0-10)",
+
+        chart_axis_stable: "0 (Stabil)",
+        chart_placeholder: "Adăugați înregistrări pentru grafic",
+
+        // Hero Card & Banner
+        hero_greeting: "Bună! 👋",
+        hero_how_feeling: "Cum te simți astăzi?",
+        hero_hint_duration: "Primul tău check-in durează aproximativ 30 de secunde.",
+        hero_start_first: "Începe primul check-in",
+        hero_log_today: "Fă check-in-ul de azi",
+        hero_completed_sub: "Ai completat check-in-ul pentru astăzi.",
+        hero_completed_badge: "✓ Check-in complet pentru azi",
+        hero_edit_btn: "Editează",
+
+        demo_banner_text: "Vizualizezi <strong>date demo</strong> &mdash; acestea nu sunt datele tale reale.",
+        demo_banner_btn: "Șterge demo și începe",
+
+        // Stat descriptors
+        stat_mood_stable: "Echilibrat",
+        stat_mood_very_high: "Stare foarte ridicată",
+        stat_mood_elevated: "Elevată",
+        stat_mood_slightly_high: "Ușor ridicată",
+        stat_mood_severe_dep: "Depresie severă",
+        stat_mood_difficult: "Dificilă",
+        stat_mood_slightly_low: "Ușor scăzută",
+
+        stat_sleep_good: "Bun",
+        stat_sleep_low: "Scăzut",
+        stat_sleep_too_long: "Prea lung",
+
+        stat_anxiety_low: "Scăzută",
+        stat_anxiety_high: "Ridicată",
+        stat_anxiety_moderate: "Moderată",
+
+        stat_energy_good: "Bună",
+        stat_energy_very_high: "Foarte ridicată",
+        stat_energy_low: "Scăzută",
+
+        // Insights & Summary
+        insights_title: "Ce observăm",
+        insights_sub: "Tipare și asocieri descoperite în datele tale",
+        summary_title: "Rezumat",
+        summary_lbl_checkins: "Check-in-uri",
+        summary_lbl_sleep: "Somn mediu",
+        summary_lbl_anxiety: "Anxietate",
+        summary_lbl_mood: "Evoluție dispoziție",
+        summary_footer_comparison: "📊 Comparativ cu perioada precedentă",
+        insights_collecting_title: "Colectăm mai multe date",
+        insights_collecting_desc: "Secțiunea <strong>„Ce observăm”</strong> se activează după <strong>3 check-in-uri</strong> pentru a-ți arăta primele observații. Continuă să-ți înregistrezi starea zi de zi!",
+        badge_preliminary: "🌱 Observație preliminară",
+        badge_pattern: "📊 Tipar preliminar",
+        badge_trend: "🌟 Tendință consistentă",
+        insights_based_on: "🔎 Bazat pe {count} check-in-uri",
+        insights_balanced_title: "Stare generală echilibrată",
+        insights_balanced_desc: "Nu am identificat fluctuații sau asocieri marcante în datele tale recente. Continuă check-in-urile zilnice!",
+        backup_banner_text: "🔒 Datele sunt stocate local. <a href=\"#\" onclick=\"exportData(); return false;\" class=\"backup-link\">Exportă un backup</a> pentru a evita pierderea lor.",
+        dashboard_privacy_footer: "🔒 Datele tale sunt stocate 100% local pe dispozitivul tău."
     },
     en: {
         app_title: "Staicumine",
@@ -174,7 +265,98 @@ const TRANSLATIONS = {
         symptom_lipsa_concentrare: "Lack of focus",
         symptom_retragere_sociala: "Social withdrawal",
         symptom_atac_panica: "Panic attack",
-        symptom_impulsivitate: "Impulsivity"
+        symptom_impulsivitate: "Impulsivity",
+
+        // Chart container & Metrics (/html/body/div[7]/main/section[1]/div[4])
+        chart_title_mood: "Mood Evolution",
+        chart_sub_mood: "Calibrated scale: -5 (Depression) to +5 (Mania)",
+        chart_title_sleep: "Sleep Hours",
+        chart_sub_sleep: "Calibrated scale: 0 to 16 hours (Optimal zone 6.5h - 9h)",
+        chart_title_anxiety: "Anxiety Level",
+        chart_sub_anxiety: "Calibrated scale: 0 (Low) to 10 (Severe)",
+        chart_title_energy: "Energy Level",
+        chart_sub_energy: "Calibrated scale: 0 (Low) to 10 (Very good)",
+        chart_title_all: "All Metrics Overlaid",
+        chart_sub_all: "Comparative tracking on normalized percentage scale",
+
+        metric_mood: "Mood",
+        metric_sleep: "Sleep",
+        metric_anxiety: "Anxiety",
+        metric_energy: "Energy",
+        metric_all: "All",
+
+        filter_7_days: "7 Days",
+        filter_30_days: "30 Days",
+        filter_90_days: "90 Days",
+
+        chart_empty_title: "Start tracking your progress",
+        chart_empty_desc: "Complete your first check-in to see your mood, sleep, and anxiety trends here.",
+        chart_empty_cta: "Do first check-in",
+
+        legend_mood: "Mood (-5 to +5)",
+        legend_stability: "Stability Line (0)",
+        legend_sleep: "Sleep Hours (0-16h)",
+        legend_sleep_optimal: "Optimal sleep zone (6.5h - 9h)",
+        legend_anxiety: "Anxiety (0-10)",
+        legend_comfort_zone: "Comfort zone (0-3)",
+        legend_energy: "Energy (0-10)",
+
+        chart_axis_stable: "0 (Stable)",
+        chart_placeholder: "Add entries for chart",
+
+        // Hero Card & Banner
+        hero_greeting: "Hello! 👋",
+        hero_how_feeling: "How are you feeling today?",
+        hero_hint_duration: "Your first check-in takes about 30 seconds.",
+        hero_start_first: "Start first check-in",
+        hero_log_today: "Log today's check-in",
+        hero_completed_sub: "You have completed your check-in for today.",
+        hero_completed_badge: "✓ Check-in complete for today",
+        hero_edit_btn: "Edit",
+
+        demo_banner_text: "You are viewing <strong>demo data</strong> &mdash; this is not your real data.",
+        demo_banner_btn: "Clear demo and start",
+
+        // Stat descriptors
+        stat_mood_stable: "Balanced",
+        stat_mood_very_high: "Very high mood",
+        stat_mood_elevated: "Elevated",
+        stat_mood_slightly_high: "Slightly high",
+        stat_mood_severe_dep: "Severe depression",
+        stat_mood_difficult: "Difficult",
+        stat_mood_slightly_low: "Slightly low",
+
+        stat_sleep_good: "Good",
+        stat_sleep_low: "Low",
+        stat_sleep_too_long: "Too long",
+
+        stat_anxiety_low: "Low",
+        stat_anxiety_high: "High",
+        stat_anxiety_moderate: "Moderate",
+
+        stat_energy_good: "Good",
+        stat_energy_very_high: "Very high",
+        stat_energy_low: "Low",
+
+        // Insights & Summary
+        insights_title: "What we observe",
+        insights_sub: "Patterns and associations discovered in your data",
+        summary_title: "Summary",
+        summary_lbl_checkins: "Check-ins",
+        summary_lbl_sleep: "Avg sleep",
+        summary_lbl_anxiety: "Anxiety",
+        summary_lbl_mood: "Mood trend",
+        summary_footer_comparison: "📊 Compared to previous period",
+        insights_collecting_title: "Collecting more data",
+        insights_collecting_desc: "The <strong>“What we observe”</strong> section activates after <strong>3 check-ins</strong> to show your initial insights. Keep recording your daily state!",
+        badge_preliminary: "🌱 Preliminary observation",
+        badge_pattern: "📊 Preliminary pattern",
+        badge_trend: "🌟 Consistent trend",
+        insights_based_on: "🔎 Based on {count} check-ins",
+        insights_balanced_title: "Overall balanced state",
+        insights_balanced_desc: "No significant fluctuations or associations detected in your recent data. Keep logging daily!",
+        backup_banner_text: "🔒 Data is stored locally. <a href=\"#\" onclick=\"exportData(); return false;\" class=\"backup-link\">Export a backup</a> to prevent data loss.",
+        dashboard_privacy_footer: "🔒 Your data is stored 100% locally on your device."
     }
 };
 
@@ -208,7 +390,11 @@ function setLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) {
-            el.textContent = TRANSLATIONS[lang][key];
+            if (el.getAttribute('data-i18n-html') === 'true') {
+                el.innerHTML = TRANSLATIONS[lang][key];
+            } else {
+                el.textContent = TRANSLATIONS[lang][key];
+            }
         }
     });
 
@@ -1000,13 +1186,13 @@ function renderHeroCard() {
         container.innerHTML = `
             <div class="welcome-hero-card glass onboarding-hero">
                 <div class="welcome-hero-text">
-                    <h2>Bună! 👋</h2>
-                    <p class="welcome-hero-sub">Cum te simți astăzi?</p>
-                    <p class="hero-onboarding-hint">Primul tău check-in durează aproximativ 30 de secunde.</p>
+                    <h2>${t('hero_greeting')}</h2>
+                    <p class="welcome-hero-sub">${t('hero_how_feeling')}</p>
+                    <p class="hero-onboarding-hint">${t('hero_hint_duration')}</p>
                 </div>
                 <button class="checkin-btn-hero" onclick="switchTab('log')">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
-                    <span>Începe primul check-in</span>
+                    <span>${t('hero_start_first')}</span>
                 </button>
             </div>
         `;
@@ -1014,12 +1200,12 @@ function renderHeroCard() {
         container.innerHTML = `
             <div class="welcome-hero-card glass">
                 <div class="welcome-hero-text">
-                    <h2>Bună! 👋</h2>
-                    <p class="welcome-hero-sub">Cum te simți astăzi?</p>
+                    <h2>${t('hero_greeting')}</h2>
+                    <p class="welcome-hero-sub">${t('hero_how_feeling')}</p>
                 </div>
                 <button class="checkin-btn-hero" onclick="switchTab('log')">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
-                    <span>Fă check-in-ul de azi</span>
+                    <span>${t('hero_log_today')}</span>
                 </button>
             </div>
         `;
@@ -1027,14 +1213,14 @@ function renderHeroCard() {
         container.innerHTML = `
             <div class="welcome-hero-card glass completed-hero">
                 <div class="welcome-hero-text">
-                    <h2>Bună! 👋</h2>
-                    <p class="welcome-hero-sub">Ai completat check-in-ul pentru astăzi.</p>
+                    <h2>${t('hero_greeting')}</h2>
+                    <p class="welcome-hero-sub">${t('hero_completed_sub')}</p>
                 </div>
                 <div class="hero-completed-actions">
-                    <span class="completed-badge">✓ Check-in complet pentru azi</span>
+                    <span class="completed-badge">${t('hero_completed_badge')}</span>
                     <button class="edit-btn-hero" onclick="editEntry('${todayStr}')">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                        <span>Editează</span>
+                        <span>${t('hero_edit_btn')}</span>
                     </button>
                 </div>
             </div>
@@ -1049,6 +1235,12 @@ function updateDashboard() {
 
     // Check if we need to show the backup warning banner
     checkBackupWarning();
+
+    // Update main chart title and subtitle
+    const titleEl = document.getElementById('chart-main-title');
+    const subEl = document.getElementById('chart-main-sub');
+    if (titleEl) titleEl.textContent = t(`chart_title_${currentChartMetric}`);
+    if (subEl) subEl.textContent = t(`chart_sub_${currentChartMetric}`);
 
     const emptyCard = document.getElementById('chart-empty-card');
     const canvasWrapper = document.getElementById('canvas-wrapper');
@@ -1105,25 +1297,26 @@ function getEntriesForPeriod(days) {
 
 // Reset stats cards to empty states
 function resetDashboardStats() {
+    const noDataText = t('stat_no_data');
     document.getElementById('stat-avg-mood').textContent = "-";
-    document.getElementById('stat-avg-mood-desc').textContent = "Fără date";
+    document.getElementById('stat-avg-mood-desc').textContent = noDataText;
     
     document.getElementById('stat-avg-sleep').textContent = "-";
-    document.getElementById('stat-avg-sleep-desc').textContent = "Fără date";
+    document.getElementById('stat-avg-sleep-desc').textContent = noDataText;
     
     document.getElementById('stat-avg-anxiety').textContent = "-";
-    document.getElementById('stat-avg-anxiety-desc').textContent = "Fără date";
+    document.getElementById('stat-avg-anxiety-desc').textContent = noDataText;
     
     if (document.getElementById('stat-avg-energy')) {
         document.getElementById('stat-avg-energy').textContent = "-";
-        document.getElementById('stat-avg-energy-desc').textContent = "Fără date";
+        document.getElementById('stat-avg-energy-desc').textContent = noDataText;
     }
 
     if (document.getElementById('summary-total-entries')) {
-        document.getElementById('summary-total-entries').textContent = "0 check-in-uri";
-        document.getElementById('summary-avg-sleep').textContent = "0.0 h somn mediu";
-        document.getElementById('summary-avg-anxiety').textContent = "0.0 anxietate medie";
-        document.getElementById('summary-med-adherence').textContent = "0% aderență tratament";
+        document.getElementById('summary-total-entries').textContent = `0 ${t('summary_lbl_checkins').toLowerCase()}`;
+        document.getElementById('summary-avg-sleep').textContent = `0.0 h ${t('summary_lbl_sleep').toLowerCase()}`;
+        document.getElementById('summary-avg-anxiety').textContent = `0.0 ${t('summary_lbl_anxiety').toLowerCase()}`;
+        document.getElementById('summary-med-adherence').textContent = "0%";
     }
 }
 
@@ -1154,36 +1347,36 @@ function calculateStats(entries) {
     let moodSign = avgMood > 0 ? "+" : "";
     document.getElementById('stat-avg-mood').textContent = `${moodSign}${avgMood.toFixed(1)}`;
     
-    let moodDesc = "Echilibrat";
-    if (avgMood > 3) moodDesc = "Stare foarte ridicată";
-    else if (avgMood > 1.5) moodDesc = "Elevată";
-    else if (avgMood > 0.5) moodDesc = "Ușor ridicată";
-    else if (avgMood < -3) moodDesc = "Depresie severă";
-    else if (avgMood < -1.5) moodDesc = "Dificilă";
-    else if (avgMood < -0.5) moodDesc = "Ușor scăzută";
+    let moodDesc = t('stat_mood_stable');
+    if (avgMood > 3) moodDesc = t('stat_mood_very_high');
+    else if (avgMood > 1.5) moodDesc = t('stat_mood_elevated');
+    else if (avgMood > 0.5) moodDesc = t('stat_mood_slightly_high');
+    else if (avgMood < -3) moodDesc = t('stat_mood_severe_dep');
+    else if (avgMood < -1.5) moodDesc = t('stat_mood_difficult');
+    else if (avgMood < -0.5) moodDesc = t('stat_mood_slightly_low');
     
     document.getElementById('stat-avg-mood-desc').textContent = moodDesc;
     
     // Sleep avg
     document.getElementById('stat-avg-sleep').textContent = `${avgSleep.toFixed(1)} h`;
-    let sleepDesc = "Bun";
-    if (avgSleep < 6) sleepDesc = "Scăzut";
-    else if (avgSleep > 9) sleepDesc = "Prea lung";
+    let sleepDesc = t('stat_sleep_good');
+    if (avgSleep < 6) sleepDesc = t('stat_sleep_low');
+    else if (avgSleep > 9) sleepDesc = t('stat_sleep_too_long');
     document.getElementById('stat-avg-sleep-desc').textContent = sleepDesc;
 
     // Anxiety avg
     document.getElementById('stat-avg-anxiety').textContent = `${avgAnxiety.toFixed(1)}`;
-    let anxietyDesc = "Scăzută";
-    if (avgAnxiety >= 7) anxietyDesc = "Ridicată";
-    else if (avgAnxiety >= 3.5) anxietyDesc = "Moderată";
+    let anxietyDesc = t('stat_anxiety_low');
+    if (avgAnxiety >= 7) anxietyDesc = t('stat_anxiety_high');
+    else if (avgAnxiety >= 3.5) anxietyDesc = t('stat_anxiety_moderate');
     document.getElementById('stat-avg-anxiety-desc').textContent = anxietyDesc;
 
     // Energy avg
     if (document.getElementById('stat-avg-energy')) {
         document.getElementById('stat-avg-energy').textContent = `${avgEnergy.toFixed(1)}`;
-        let energyDesc = "Bună";
-        if (avgEnergy >= 7.5) energyDesc = "Foarte ridicată";
-        else if (avgEnergy < 4) energyDesc = "Scăzută";
+        let energyDesc = t('stat_energy_good');
+        if (avgEnergy >= 7.5) energyDesc = t('stat_energy_very_high');
+        else if (avgEnergy < 4) energyDesc = t('stat_energy_low');
         document.getElementById('stat-avg-energy-desc').textContent = energyDesc;
     }
 
@@ -1211,9 +1404,9 @@ function renderInsights(entries) {
         list.innerHTML = `
             <div class="empty-state-insights" style="text-align:center;padding:1.25rem 0.5rem">
                 <div class="empty-icon-badge" style="width:36px;height:36px;font-size:1.1rem;margin:0 auto 0.6rem;display:flex;align-items:center;justify-content:center;background:rgba(99,102,241,0.12);border-radius:50%">📈</div>
-                <h4 style="font-size:0.92rem;font-weight:700;color:var(--text-primary);margin-bottom:0.3rem">Colectăm mai multe date</h4>
+                <h4 style="font-size:0.92rem;font-weight:700;color:var(--text-primary);margin-bottom:0.3rem">${t('insights_collecting_title')}</h4>
                 <p style="font-size:0.84rem;color:var(--text-muted);line-height:1.5;max-width:320px;margin:0 auto">
-                    Secțiunea <strong>„Ce observăm”</strong> se activează după <strong>3 check-in-uri</strong> pentru a-ți arăta primele observații. Continuă să-ți înregistrezi starea zi de zi!
+                    ${t('insights_collecting_desc')}
                 </p>
             </div>`;
         return;
@@ -1224,17 +1417,18 @@ function renderInsights(entries) {
     let confidenceBadgeClass = '';
     
     if (count >= 3 && count <= 6) {
-        confidenceLabel = '🌱 Observație preliminară';
+        confidenceLabel = t('badge_preliminary');
         confidenceBadgeClass = 'badge-preliminary';
     } else if (count >= 7 && count <= 29) {
-        confidenceLabel = '📊 Tipar preliminar';
+        confidenceLabel = t('badge_pattern');
         confidenceBadgeClass = 'badge-pattern';
     } else {
-        confidenceLabel = '🌟 Tendință consistentă';
+        confidenceLabel = t('badge_trend');
         confidenceBadgeClass = 'badge-trend';
     }
 
     const insights = [];
+    const isEn = currentLanguage === 'en';
 
     // Analyze Sleep vs Anxiety
     const lowSleepDays = entries.filter(e => e.sleep < 6.5);
@@ -1248,10 +1442,14 @@ function renderInsights(entries) {
             insights.push({
                 type: 'alert',
                 icon: '😴',
-                title: 'Somnul și anxietatea par asociate',
+                title: isEn ? 'Sleep and anxiety appear linked' : 'Somnul și anxietatea par asociate',
                 desc: count <= 6 
-                    ? `O primă observație: anxietatea medie a fost de ${avgAnxietyLowSleep.toFixed(1)}/10 în zilele cu mai puțin de 6.5h somn, față de ${avgAnxietyNormalSleep.toFixed(1)}/10 în zilele cu somn odihnitor.`
-                    : `În ultimele ${currentChartPeriod} zile (${count} check-in-uri), anxietatea medie a fost de ${avgAnxietyLowSleep.toFixed(1)}/10 în zilele cu mai puțin de 6.5 ore de somn, comparativ cu ${avgAnxietyNormalSleep.toFixed(1)}/10 în cele cu somn suficient.`
+                    ? (isEn
+                        ? `Initial observation: average anxiety was ${avgAnxietyLowSleep.toFixed(1)}/10 on days with less than 6.5h sleep, compared to ${avgAnxietyNormalSleep.toFixed(1)}/10 on days with restful sleep.`
+                        : `O primă observație: anxietatea medie a fost de ${avgAnxietyLowSleep.toFixed(1)}/10 în zilele cu mai puțin de 6.5h somn, față de ${avgAnxietyNormalSleep.toFixed(1)}/10 în zilele cu somn odihnitor.`)
+                    : (isEn
+                        ? `In the last ${currentChartPeriod} days (${count} check-ins), average anxiety was ${avgAnxietyLowSleep.toFixed(1)}/10 on days with less than 6.5 hours of sleep, compared to ${avgAnxietyNormalSleep.toFixed(1)}/10 on days with sufficient sleep.`
+                        : `În ultimele ${currentChartPeriod} zile (${count} check-in-uri), anxietatea medie a fost de ${avgAnxietyLowSleep.toFixed(1)}/10 în zilele cu mai puțin de 6.5 ore de somn, comparativ cu ${avgAnxietyNormalSleep.toFixed(1)}/10 în cele cu somn suficient.`)
             });
         }
     }
@@ -1264,8 +1462,10 @@ function renderInsights(entries) {
             insights.push({
                 type: 'alert',
                 icon: '🔎',
-                title: 'Am observat un tipar care merită urmărit',
-                desc: `În ultimele ${currentChartPeriod} zile, în zilele cu o stare mai ridicată (+2 sau peste), somnul mediu a fost mai scăzut (${avgSleepManic.toFixed(1)}h). Dacă acest tipar se repetă sau te îngrijorează, îți recomandăm să îl discuți cu medicul sau terapeutul tău.`
+                title: isEn ? 'A pattern worth monitoring was observed' : 'Am observat un tipar care merită urmărit',
+                desc: isEn
+                    ? `In the last ${currentChartPeriod} days, on days with an elevated state (+2 or higher), average sleep was lower (${avgSleepManic.toFixed(1)}h). If this pattern persists or concerns you, consider discussing it with your healthcare professional.`
+                    : `În ultimele ${currentChartPeriod} zile, în zilele cu o stare mai ridicată (+2 sau peste), somnul mediu a fost mai scăzut (${avgSleepManic.toFixed(1)}h). Dacă acest tipar se repetă sau te îngrijorează, îți recomandăm să îl discuți cu medicul sau terapeutul tău.`
             });
         }
     }
@@ -1273,18 +1473,23 @@ function renderInsights(entries) {
     // Analyze Medication compliance vs mood stability
     const missedMedDays = entries.filter(e => !e.medicationTaken);
     if (missedMedDays.length > 0) {
+        const dayWord = isEn ? (missedMedDays.length === 1 ? 'day' : 'days') : (missedMedDays.length === 1 ? 'zi' : 'zile');
         insights.push({
             type: 'alert',
             icon: '💊',
-            title: `Monitorizarea tratamentului`,
-            desc: `Ai înregistrat ${missedMedDays.length} ${missedMedDays.length === 1 ? 'zi' : 'zile'} fără tratament în ultimele ${currentChartPeriod} zile (${count} check-in-uri). Menținerea rutei de tratament sprijină stabilitatea emoțională.`
+            title: isEn ? 'Treatment Monitoring' : 'Monitorizarea tratamentului',
+            desc: isEn
+                ? `You logged ${missedMedDays.length} ${dayWord} without medication in the last ${currentChartPeriod} days (${count} check-ins). Consistent adherence supports emotional balance.`
+                : `Ai înregistrat ${missedMedDays.length} ${dayWord} fără tratament în ultimele ${currentChartPeriod} zile (${count} check-in-uri). Menținerea rutei de tratament sprijină stabilitatea emoțională.`
         });
     } else {
         insights.push({
             type: 'stable',
             icon: '🌱',
-            title: 'Tratament urmat consecvent',
-            desc: `Ai bifat tratamentul în fiecare zi din ultimele ${currentChartPeriod} zile (${count} check-in-uri).`
+            title: isEn ? 'Consistent Treatment Adherence' : 'Tratament urmat consecvent',
+            desc: isEn
+                ? `You adhered to your treatment every day over the last ${currentChartPeriod} days (${count} check-ins).`
+                : `Ai bifat tratamentul în fiecare zi din ultimele ${currentChartPeriod} zile (${count} check-in-uri).`
         });
     }
 
@@ -1294,14 +1499,16 @@ function renderInsights(entries) {
         insights.push({
             type: 'stable',
             icon: '⚖️',
-            title: `${stableDays.length} zile de echilibru menținut`,
-            desc: `Ai menținut o stare stabilă în această perioadă. Continuă obiceiurile sănătoase de somn.`
+            title: isEn ? `${stableDays.length} days of balance maintained` : `${stableDays.length} zile de echilibru menținut`,
+            desc: isEn
+                ? 'You maintained a stable state during this period. Keep up your healthy sleep habits.'
+                : 'Ai menținut o stare stabilă în această perioadă. Continuă obiceiurile sănătoase de somn.'
         });
     }
 
     // Render insights list
     if (insights.length === 0) {
-        list.innerHTML = `<div class="insight-card"><div class="insight-title">Stare generală echilibrată</div><div class="insight-desc">Nu am identificat fluctuații sau asocieri marcante în datele tale recente. Continuă check-in-urile zilnice!</div></div>`;
+        list.innerHTML = `<div class="insight-card"><div class="insight-title">${t('insights_balanced_title')}</div><div class="insight-desc">${t('insights_balanced_desc')}</div></div>`;
     } else {
         insights.forEach(ins => {
             const card = document.createElement('div');
@@ -1312,7 +1519,7 @@ function renderInsights(entries) {
                     <span class="confidence-badge ${confidenceBadgeClass}">${confidenceLabel}</span>
                 </div>
                 <div class="insight-desc">${ins.desc}</div>
-                <div class="insight-footer">🔎 Bazat pe ${count} check-in-uri</div>
+                <div class="insight-footer">${t('insights_based_on').replace('{count}', count)}</div>
             `;
             list.appendChild(card);
         });
@@ -1354,22 +1561,8 @@ function setChartMetric(metric) {
     const titleEl = document.getElementById('chart-main-title');
     const subEl = document.getElementById('chart-main-sub');
 
-    if (metric === 'mood') {
-        if (titleEl) titleEl.textContent = "Evoluția dispoziției";
-        if (subEl) subEl.textContent = "Scară calibrată: -5 (Depresie) la +5 (Manie)";
-    } else if (metric === 'sleep') {
-        if (titleEl) titleEl.textContent = "Ore de somn";
-        if (subEl) subEl.textContent = "Scară calibrată: 0 la 16 ore (Zona optimă 6.5h - 9h)";
-    } else if (metric === 'anxiety') {
-        if (titleEl) titleEl.textContent = "Nivel de anxietate";
-        if (subEl) subEl.textContent = "Scară calibrată: 0 (Scăzută) la 10 (Severă)";
-    } else if (metric === 'energy') {
-        if (titleEl) titleEl.textContent = "Nivel de energie";
-        if (subEl) subEl.textContent = "Scară calibrată: 0 (Scăzută) la 10 (Foarte bună)";
-    } else if (metric === 'all') {
-        if (titleEl) titleEl.textContent = "Toți indicatorii suprapuși";
-        if (subEl) subEl.textContent = "Urmărire comparativă pe scară procentuală normalizată";
-    }
+    if (titleEl) titleEl.textContent = t(`chart_title_${metric}`);
+    if (subEl) subEl.textContent = t(`chart_sub_${metric}`);
 
     const filteredEntries = getEntriesForPeriod(currentChartPeriod);
     drawCustomChart(filteredEntries);
@@ -1382,29 +1575,29 @@ function renderChartLegend() {
 
     if (currentChartMetric === 'mood') {
         legendEl.innerHTML = `
-            <span class="legend-item"><span class="legend-dot" style="background: #818cf8;"></span> Dispoziție (-5 la +5)</span>
-            <span class="legend-item"><span class="legend-dot" style="background: #10b981;"></span> Linia de Stabilitate (0)</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #818cf8;"></span> ${t('legend_mood')}</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #10b981;"></span> ${t('legend_stability')}</span>
         `;
     } else if (currentChartMetric === 'sleep') {
         legendEl.innerHTML = `
-            <span class="legend-item"><span class="legend-dot" style="background: #38bdf8;"></span> Ore Somn (0-16h)</span>
-            <span class="legend-item"><span class="legend-dot" style="background: rgba(56, 189, 248, 0.25);"></span> Zona optimă de somn (6.5h - 9h)</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #38bdf8;"></span> ${t('legend_sleep')}</span>
+            <span class="legend-item"><span class="legend-dot" style="background: rgba(56, 189, 248, 0.25);"></span> ${t('legend_sleep_optimal')}</span>
         `;
     } else if (currentChartMetric === 'anxiety') {
         legendEl.innerHTML = `
-            <span class="legend-item"><span class="legend-dot" style="background: #f59e0b;"></span> Anxietate (0-10)</span>
-            <span class="legend-item"><span class="legend-dot" style="background: rgba(16, 185, 129, 0.25);"></span> Zona de confort (0-3)</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #f59e0b;"></span> ${t('legend_anxiety')}</span>
+            <span class="legend-item"><span class="legend-dot" style="background: rgba(16, 185, 129, 0.25);"></span> ${t('legend_comfort_zone')}</span>
         `;
     } else if (currentChartMetric === 'energy') {
         legendEl.innerHTML = `
-            <span class="legend-item"><span class="legend-dot" style="background: #10b981;"></span> Energie (0-10)</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #10b981;"></span> ${t('legend_energy')}</span>
         `;
     } else if (currentChartMetric === 'all') {
         legendEl.innerHTML = `
-            <span class="legend-item"><span class="legend-dot" style="background: #818cf8;"></span> Dispoziție</span>
-            <span class="legend-item"><span class="legend-dot" style="background: #38bdf8;"></span> Somn</span>
-            <span class="legend-item"><span class="legend-dot" style="background: #f59e0b;"></span> Anxietate</span>
-            <span class="legend-item"><span class="legend-dot" style="background: #10b981;"></span> Energie</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #818cf8;"></span> ${t('stat_mood_title')}</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #38bdf8;"></span> ${t('stat_sleep_title')}</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #f59e0b;"></span> ${t('stat_anxiety_title')}</span>
+            <span class="legend-item"><span class="legend-dot" style="background: #10b981;"></span> ${t('stat_energy_title')}</span>
         `;
     }
 }
@@ -1511,7 +1704,7 @@ function drawCustomChart(entries) {
         gridSteps = [-5, -3, 0, 3, 5];
         lineColor = '#818cf8';
         gradientStart = 'rgba(99, 102, 241, 0.22)';
-        formatLabel = (v) => v === 0 ? "0 (Stabil)" : v > 0 ? `+${v}` : `${v}`;
+        formatLabel = (v) => v === 0 ? t('chart_axis_stable') : v > 0 ? `+${v}` : `${v}`;
     } else if (currentChartMetric === 'sleep') {
         minY = 0; maxY = 16;
         gridSteps = [0, 4, 8, 12, 16];
@@ -1679,7 +1872,8 @@ function drawCustomChart(entries) {
 }
 
 // Draw a placeholder state if no data
-function drawPlaceholderChart(message = "Adăugați înregistrări pentru grafic") {
+function drawPlaceholderChart(message) {
+    if (!message) message = t('chart_placeholder');
     const canvas = document.getElementById('mood-chart');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
