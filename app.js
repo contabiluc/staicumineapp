@@ -179,7 +179,36 @@ const TRANSLATIONS = {
         insights_balanced_title: "Stare generală echilibrată",
         insights_balanced_desc: "Nu am identificat fluctuații sau asocieri marcante în datele tale recente. Continuă check-in-urile zilnice!",
         backup_banner_text: "🔒 Datele sunt stocate local. <a href=\"#\" onclick=\"exportData(); return false;\" class=\"backup-link\">Exportă un backup</a> pentru a evita pierderea lor.",
-        dashboard_privacy_footer: "🔒 Datele tale sunt stocate 100% local pe dispozitivul tău."
+        dashboard_privacy_footer: "🔒 Datele tale sunt stocate 100% local pe dispozitivul tău.",
+
+        // Check-in form (/html/body/div[7]/main/section[2]/div/div/div)
+        checkin_header_title: "Înregistrează starea de azi",
+        checkin_header_sub: "Completează câteva informații despre dispoziție, somn și cum te-ai simțit.",
+        checkin_time_badge: "⚡ Check-in ~ 45 sec",
+        checkin_date_label: "Data check-in-ului",
+        checkin_date_warning: "⚠️ Ai deja un check-in salvat pentru această dată. Trimiterea va actualiza înregistrarea existentă.",
+        mood_guide_title: "Ghid de Autoevaluare (Axa Dispoziției)",
+        mood_guide_m5: "<strong>+5 (Manie Severă):</strong> Energie extremă, impulsivitate ridicată, somn sub 3h.",
+        mood_guide_m3: "<strong>+3 (Manie Mod.):</strong> Hiperactiv, foarte vorbăreț, iritabilitate crescută.",
+        mood_guide_m1: "<strong>+1 (Hipomanie):</strong> Stare foarte bună de spirit, optimism, productivitate.",
+        mood_guide_0: "<strong>0 (Stabil / Eutimic):</strong> Echilibru emoțional normal, stare calmă.",
+        mood_guide_d1: "<strong>-1 (Depresie Ușoară):</strong> Tristețe trecătoare, oboseală moderată.",
+        mood_guide_d3: "<strong>-3 (Depresie Mod.):</strong> Retragere socială, plâns facil, energie scăzută.",
+        mood_guide_d5: "<strong>-5 (Depresie Severă):</strong> Imposibilitate de funcționare. (Cere ajutor!)",
+        journal_notes_placeholder: "Ai observat ceva care ți-a influențat starea? Poate fi stres, conflicte, cafea, lipsă de somn, muncă etc.",
+        slider_hours: "ore",
+        slider_hour_singular: "oră",
+        anxiety_extreme: "Extremă",
+        anxiety_severe: "Severă",
+        anxiety_moderate: "Moderată",
+        anxiety_tolerable: "Tolerabilă",
+        anxiety_low: "Scăzută",
+        energy_very_high: "Foarte bună",
+        energy_good: "Bună",
+        energy_moderate: "Moderată",
+        energy_low: "Scăzută",
+        energy_very_low: "Foarte scăzută",
+        draft_saved_notice: "💾 Draft salvat automat"
     },
     en: {
         app_title: "Staicumine",
@@ -356,7 +385,36 @@ const TRANSLATIONS = {
         insights_balanced_title: "Overall balanced state",
         insights_balanced_desc: "No significant fluctuations or associations detected in your recent data. Keep logging daily!",
         backup_banner_text: "🔒 Data is stored locally. <a href=\"#\" onclick=\"exportData(); return false;\" class=\"backup-link\">Export a backup</a> to prevent data loss.",
-        dashboard_privacy_footer: "🔒 Your data is stored 100% locally on your device."
+        dashboard_privacy_footer: "🔒 Your data is stored 100% locally on your device.",
+
+        // Check-in form (/html/body/div[7]/main/section[2]/div/div/div)
+        checkin_header_title: "Log Today's Mood",
+        checkin_header_sub: "Fill in details about your mood, sleep, and how you felt today.",
+        checkin_time_badge: "⚡ Check-in ~ 45 sec",
+        checkin_date_label: "Check-in Date",
+        checkin_date_warning: "⚠️ You already have an entry saved for this date. Submitting will update it.",
+        mood_guide_title: "Self-Assessment Guide (Mood Scale)",
+        mood_guide_m5: "<strong>+5 (Severe Mania):</strong> Extreme energy, high impulsivity, sleep under 3h.",
+        mood_guide_m3: "<strong>+3 (Mod. Mania):</strong> Hyperactive, very talkative, increased irritability.",
+        mood_guide_m1: "<strong>+1 (Hypomania):</strong> Very good spirits, optimism, productivity.",
+        mood_guide_0: "<strong>0 (Stable / Euthymic):</strong> Normal emotional balance, calm state.",
+        mood_guide_d1: "<strong>-1 (Mild Depression):</strong> Passing sadness, moderate fatigue.",
+        mood_guide_d3: "<strong>-3 (Mod. Depression):</strong> Social withdrawal, easy tears, low energy.",
+        mood_guide_d5: "<strong>-5 (Severe Depression):</strong> Inability to function. (Seek help!)",
+        journal_notes_placeholder: "Did you notice anything influencing your mood? Could be stress, conflicts, coffee, lack of sleep, work, etc.",
+        slider_hours: "hours",
+        slider_hour_singular: "hour",
+        anxiety_extreme: "Extreme",
+        anxiety_severe: "Severe",
+        anxiety_moderate: "Moderate",
+        anxiety_tolerable: "Tolerable",
+        anxiety_low: "Low",
+        energy_very_high: "Very high",
+        energy_good: "Good",
+        energy_moderate: "Moderate",
+        energy_low: "Low",
+        energy_very_low: "Very low",
+        draft_saved_notice: "💾 Draft saved automatically"
     }
 };
 
@@ -418,6 +476,20 @@ function setLanguage(lang) {
     if (headerSubtitle && TRANSLATIONS[lang][`tab_sub_${tabId}`]) {
         headerSubtitle.textContent = TRANSLATIONS[lang][`tab_sub_${tabId}`];
     }
+
+    // Update journal notes placeholder
+    const journalNotes = document.getElementById('journal-notes');
+    if (journalNotes) {
+        journalNotes.placeholder = t('journal_notes_placeholder');
+    }
+
+    // Refresh slider values in current language
+    const sleepInput = document.getElementById('sleep-hours');
+    const anxietyInput = document.getElementById('anxiety-level');
+    const energyInput = document.getElementById('energy-level');
+    if (sleepInput) updateSliderVal('sleep-hours-val', sleepInput.value);
+    if (anxietyInput) updateSliderVal('anxiety-val', anxietyInput.value);
+    if (energyInput) updateSliderVal('energy-val', energyInput.value);
 
     if (tabId === 'dashboard') {
         updateDashboard();
@@ -914,23 +986,24 @@ function updateSliderVal(badgeId, value) {
     const val = parseFloat(value);
 
     if (badgeId === 'sleep-hours-val') {
-        badge.textContent = `${val} ore`;
+        const hourUnit = val === 1 ? t('slider_hour_singular') : t('slider_hours');
+        badge.textContent = `${val} ${hourUnit}`;
     } else if (badgeId === 'anxiety-val') {
-        let label = 'Scăzută';
-        if (val >= 9) label = 'Extremă';
-        else if (val >= 7) label = 'Severă';
-        else if (val >= 5) label = 'Moderată';
-        else if (val >= 2) label = 'Tolerabilă';
-        else if (val <= 1) label = 'Scăzută';
-        badge.textContent = `${val} / 10 • ${label}`;
+        let labelKey = 'anxiety_low';
+        if (val >= 9) labelKey = 'anxiety_extreme';
+        else if (val >= 7) labelKey = 'anxiety_severe';
+        else if (val >= 5) labelKey = 'anxiety_moderate';
+        else if (val >= 2) labelKey = 'anxiety_tolerable';
+        else if (val <= 1) labelKey = 'anxiety_low';
+        badge.textContent = `${val} / 10 • ${t(labelKey)}`;
     } else if (badgeId === 'energy-val') {
-        let label = 'Moderată';
-        if (val >= 9) label = 'Foarte bună';
-        else if (val >= 7) label = 'Bună';
-        else if (val >= 5) label = 'Moderată';
-        else if (val >= 3) label = 'Scăzută';
-        else if (val <= 2) label = 'Foarte scăzută';
-        badge.textContent = `${val} / 10 • ${label}`;
+        let labelKey = 'energy_moderate';
+        if (val >= 9) labelKey = 'energy_very_high';
+        else if (val >= 7) labelKey = 'energy_good';
+        else if (val >= 5) labelKey = 'energy_moderate';
+        else if (val >= 3) labelKey = 'energy_low';
+        else if (val <= 2) labelKey = 'energy_very_low';
+        badge.textContent = `${val} / 10 • ${t(labelKey)}`;
     }
 }
 

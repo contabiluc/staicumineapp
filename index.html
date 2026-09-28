@@ -583,19 +583,19 @@
                 <div class="log-form-container glass">
                     <div class="form-header-bar">
                         <div>
-                            <h2>Înregistrează starea de azi</h2>
-                            <p class="form-header-sub">Completează câteva informații despre dispoziție, somn și cum te-ai simțit.</p>
+                            <h2 data-i18n="checkin_header_title">Înregistrează starea de azi</h2>
+                            <p class="form-header-sub" data-i18n="checkin_header_sub">Completează câteva informații despre dispoziție, somn și cum te-ai simțit.</p>
                         </div>
-                        <span class="checkin-time-badge">⚡ Check-in ~ 45 sec</span>
+                        <span class="checkin-time-badge" data-i18n="checkin_time_badge">⚡ Check-in ~ 45 sec</span>
                     </div>
 
                     <form id="mood-form" onsubmit="saveMoodEntry(event)">
                         
                         <!-- Date selector -->
                         <div class="form-group inline-group date-picker-box">
-                            <label for="entry-date">Data check-in-ului</label>
+                            <label for="entry-date" data-i18n="checkin_date_label">Data check-in-ului</label>
                             <input type="date" id="entry-date" required onchange="checkExistingEntryForDate(this.value)">
-                            <div id="duplicate-date-warning" class="date-warning-badge" style="display:none;">
+                            <div id="duplicate-date-warning" class="date-warning-badge" style="display:none;" data-i18n="checkin_date_warning">
                                 ⚠️ Ai deja un check-in salvat pentru această dată. Trimiterea va actualiza înregistrarea existentă.
                             </div>
                         </div>
@@ -605,26 +605,26 @@
                             <div class="step-header">
                                 <span class="step-number">1</span>
                                 <div class="step-title-group">
-                                    <h3>Cum te-ai simțit astăzi?</h3>
-                                    <p>Alege nivelul care descrie cel mai bine starea ta.</p>
+                                    <h3 data-i18n="step1_title">Cum te-ai simțit astăzi?</h3>
+                                    <p data-i18n="step1_sub">Alege nivelul care descrie cel mai bine starea ta.</p>
                                 </div>
                                 <button type="button" class="info-toggle-btn" onclick="toggleMoodGuide()">
                                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right:4px; vertical-align:middle;"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                                    Ghid
+                                    <span data-i18n="guide_btn">Ghid</span>
                                 </button>
                             </div>
                             
                             <!-- Mood scale visual guide (collapsible) -->
                             <div id="mood-guide-panel" class="mood-guide-panel" style="display: none;">
-                                <h4>Ghid de Autoevaluare (Axa Dispoziției)</h4>
+                                <h4 data-i18n="mood_guide_title">Ghid de Autoevaluare (Axa Dispoziției)</h4>
                                 <div class="mood-guide-grid">
-                                    <div class="mood-guide-item item-mania-5"><strong>+5 (Manie Severă):</strong> Energie extremă, impulsivitate ridicată, somn sub 3h.</div>
-                                    <div class="mood-guide-item item-mania-3"><strong>+3 (Manie Mod.):</strong> Hiperactiv, foarte vorbăreț, iritabilitate crescută.</div>
-                                    <div class="mood-guide-item item-mania-1"><strong>+1 (Hipomanie):</strong> Stare foarte bună de spirit, optimism, productivitate.</div>
-                                    <div class="mood-guide-item item-stable"><strong>0 (Stabil / Eutimic):</strong> Echilibru emoțional normal, stare calmă.</div>
-                                    <div class="mood-guide-item item-depr-1"><strong>-1 (Depresie Ușoară):</strong> Tristețe trecătoare, oboseală moderată.</div>
-                                    <div class="mood-guide-item item-depr-3"><strong>-3 (Depresie Mod.):</strong> Retragere socială, plâns facil, energie scăzută.</div>
-                                    <div class="mood-guide-item item-depr-5"><strong>-5 (Depresie Severă):</strong> Imposibilitate de funcționare. (Cere ajutor!)</div>
+                                    <div class="mood-guide-item item-mania-5" data-i18n="mood_guide_m5" data-i18n-html="true"><strong>+5 (Manie Severă):</strong> Energie extremă, impulsivitate ridicată, somn sub 3h.</div>
+                                    <div class="mood-guide-item item-mania-3" data-i18n="mood_guide_m3" data-i18n-html="true"><strong>+3 (Manie Mod.):</strong> Hiperactiv, foarte vorbăreț, iritabilitate crescută.</div>
+                                    <div class="mood-guide-item item-mania-1" data-i18n="mood_guide_m1" data-i18n-html="true"><strong>+1 (Hipomanie):</strong> Stare foarte bună de spirit, optimism, productivitate.</div>
+                                    <div class="mood-guide-item item-stable" data-i18n="mood_guide_0" data-i18n-html="true"><strong>0 (Stabil / Eutimic):</strong> Echilibru emoțional normal, stare calmă.</div>
+                                    <div class="mood-guide-item item-depr-1" data-i18n="mood_guide_d1" data-i18n-html="true"><strong>-1 (Depresie Ușoară):</strong> Tristețe trecătoare, oboseală moderată.</div>
+                                    <div class="mood-guide-item item-depr-3" data-i18n="mood_guide_d3" data-i18n-html="true"><strong>-3 (Depresie Mod.):</strong> Retragere socială, plâns facil, energie scăzută.</div>
+                                    <div class="mood-guide-item item-depr-5" data-i18n="mood_guide_d5" data-i18n-html="true"><strong>-5 (Depresie Severă):</strong> Imposibilitate de funcționare. (Cere ajutor!)</div>
                                 </div>
                             </div>
                             
@@ -797,7 +797,7 @@
 
                         <!-- Draft status notice -->
                         <div id="draft-status-notice" class="draft-status-notice" style="display:none;">
-                            💾 Draft salvat automat <span id="draft-time-label"></span>
+                            <span data-i18n="draft_saved_notice">💾 Draft salvat automat</span> <span id="draft-time-label"></span>
                         </div>
 
                         <!-- Form Actions -->
