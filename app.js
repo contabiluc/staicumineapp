@@ -183,6 +183,7 @@ const TRANSLATIONS = {
 
         // Check-in form (/html/body/div[7]/main/section[2]/div/div/div)
         checkin_header_title: "Înregistrează starea de azi",
+        checkin_header_title_edit: "Editează check-in-ul",
         checkin_header_sub: "Completează câteva informații despre dispoziție, somn și cum te-ai simțit.",
         checkin_time_badge: "⚡ Check-in ~ 45 sec",
         checkin_date_label: "Data check-in-ului",
@@ -389,6 +390,7 @@ const TRANSLATIONS = {
 
         // Check-in form (/html/body/div[7]/main/section[2]/div/div/div)
         checkin_header_title: "Log Today's Mood",
+        checkin_header_title_edit: "Edit Check-in",
         checkin_header_sub: "Fill in details about your mood, sleep, and how you felt today.",
         checkin_time_badge: "⚡ Check-in ~ 45 sec",
         checkin_date_label: "Check-in Date",
@@ -556,11 +558,12 @@ function isValidLocalDateString(value) {
     );
 }
 
-// Format date helper (RO layout)
+// Format date helper (locale-aware)
 function formatDateRO(dateStr) {
     const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
     const date = parseLocalDate(dateStr);
-    return date.toLocaleDateString('ro-RO', options);
+    const locale = (typeof currentLanguage !== 'undefined' && currentLanguage === 'en') ? 'en-US' : 'ro-RO';
+    return date.toLocaleDateString(locale, options);
 }
 
 // Generate Realistic Mock Data for Demonstration
@@ -904,10 +907,10 @@ function editEntry(dateStr) {
 
         // Update Form Header Title & Submit CTA
         const formTitle = document.querySelector('#view-log .form-header-bar h2');
-        if (formTitle) formTitle.textContent = "Editează check-in-ul";
+        if (formTitle) formTitle.textContent = t('checkin_header_title_edit');
 
         const submitBtn = document.querySelector('#view-log button[type="submit"]');
-        if (submitBtn) submitBtn.textContent = "Actualizează check-in-ul";
+        if (submitBtn) submitBtn.textContent = t('submit_btn_update');
 
         // Show edit mode badge
         let editBadge = document.getElementById('edit-mode-notice-badge');
@@ -935,10 +938,10 @@ function resetLogForm() {
     try {
         // Reset Form Header & CTA text
         const formTitle = document.querySelector('#view-log .form-header-bar h2');
-        if (formTitle) formTitle.textContent = "Înregistrează starea de azi";
+        if (formTitle) formTitle.textContent = t('checkin_header_title');
 
         const submitBtn = document.querySelector('#view-log button[type="submit"]');
-        if (submitBtn) submitBtn.textContent = "Salvează check-in-ul";
+        if (submitBtn) submitBtn.textContent = t('submit_btn_save');
 
         const editBadge = document.getElementById('edit-mode-notice-badge');
         if (editBadge) editBadge.style.display = 'none';
@@ -2529,9 +2532,9 @@ function autoExpandTextarea(textarea) {
 
 // On Application Init Load
 window.addEventListener('DOMContentLoaded', () => {
-    initLanguage();
     loadData();
     resetLogForm();
+    initLanguage();
     updateDashboard();
 
     // Auto expand all textareas dynamically
