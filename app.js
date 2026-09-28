@@ -89,6 +89,8 @@ const TRANSLATIONS = {
         symptom_retragere_sociala: "Retragere socială",
         symptom_atac_panica: "Atac de panică",
         symptom_impulsivitate: "Impulsivitate",
+        symptom_insomnie_usoara: "Insomnie / Somn tulburat",
+        symptom_oboseala: "Oboseală accentuată",
 
         // Chart container & Metrics (/html/body/div[7]/main/section[1]/div[4])
         chart_title_mood: "Evoluția dispoziției",
@@ -299,7 +301,45 @@ const TRANSLATIONS = {
         crisis_line_depre_label: "DepreHUB — Suport Anxietate & Depresie",
         crisis_exercise_title: "Exercițiu de calmare (Respirație 4-7-8)",
         crisis_exercise_sub: "Scade ritmul cardiac și atenuează anxietatea în 2 minute.",
-        crisis_exercise_btn: "🫁 Începe Respirația Ghidată"
+        crisis_exercise_btn: "🫁 Începe Respirația Ghidată",
+
+        // History View (/html/body/div[7]/main/section[4] #view-history)
+        history_header_title: "Istoric Jurnal & Intrări Anterioare",
+        history_header_desc: "Consultă, caută și filtrează toate check-in-urile tale anterioare.",
+        history_search_ph: "Caută în jurnale, simptome sau dată...",
+        history_filter_all: "🌐 Toate",
+        history_filter_mood_low: "📉 Dispoziție scăzută",
+        history_filter_mood_stable: "⚖️ Stabilă",
+        history_filter_mood_high: "📈 Ridicată",
+        history_filter_sleep_low: "😴 Somn < 6h",
+        history_filter_anxiety_high: "⚡ Anxietate > 6",
+        history_filter_med_missed: "💊 Tratament omis",
+        history_empty_text: "Nu există nicio înregistrare salvată până acum.",
+        history_empty_btn: "Fă primul check-in",
+        history_no_matches: "Nicio înregistrare nu se potrivește filtrelor selectate.",
+        history_reset_filters: "Resetează filtrele",
+        history_checkin_singular: "check-in",
+        history_checkin_plural: "check-in-uri",
+        history_med_taken: "✓ Tratament",
+        history_med_missed: "✗ Fără tratament",
+        history_view_details: "Vezi detalii →",
+        history_btn_edit: "✏️ Editează",
+        history_btn_delete: "🗑️ Șterge",
+        history_confirm_delete: "Sigur dorești să ștergi definitiv înregistrarea din data de",
+        history_toast_deleted: "Înregistrarea a fost ștearsă.",
+
+        // Entry Detail Modal (#entry-detail-modal)
+        detail_lbl_mood: "Dispoziție",
+        detail_lbl_sleep: "Somn",
+        detail_lbl_anxiety: "Anxietate",
+        detail_lbl_energy: "Energie",
+        detail_title_treatment: "Tratament",
+        detail_title_symptoms: "Simptome / Stări",
+        detail_title_notes: "Jurnal / Note",
+        btn_edit: "Editează",
+        btn_delete: "Șterge",
+        detail_med_taken: "✓ Am urmat tratamentul prescris astăzi",
+        detail_med_not_taken: "✗ Nu am urmat tratamentul pentru această zi"
     },
     en: {
         app_title: "Staicumine",
@@ -386,6 +426,8 @@ const TRANSLATIONS = {
         symptom_retragere_sociala: "Social withdrawal",
         symptom_atac_panica: "Panic attack",
         symptom_impulsivitate: "Impulsivity",
+        symptom_insomnie_usoara: "Mild insomnia / Disturbed sleep",
+        symptom_oboseala: "Severe fatigue",
 
         // Chart container & Metrics (/html/body/div[7]/main/section[1]/div[4])
         chart_title_mood: "Mood Evolution",
@@ -596,7 +638,45 @@ const TRANSLATIONS = {
         crisis_line_depre_label: "DepreHUB — Anxiety & Depression Support",
         crisis_exercise_title: "Calming Exercise (4-7-8 Breathing)",
         crisis_exercise_sub: "Lowers heart rate and eases anxiety in 2 minutes.",
-        crisis_exercise_btn: "🫁 Start Guided Breathing"
+        crisis_exercise_btn: "🫁 Start Guided Breathing",
+
+        // History View (/html/body/div[7]/main/section[4] #view-history)
+        history_header_title: "Mood Journal & Past Entries",
+        history_header_desc: "Review, search, and filter all your past check-ins.",
+        history_search_ph: "Search in journals, symptoms, or date...",
+        history_filter_all: "🌐 All",
+        history_filter_mood_low: "📉 Low mood",
+        history_filter_mood_stable: "⚖️ Stable",
+        history_filter_mood_high: "📈 Elevated",
+        history_filter_sleep_low: "😴 Sleep < 6h",
+        history_filter_anxiety_high: "⚡ Anxiety > 6",
+        history_filter_med_missed: "💊 Missed medication",
+        history_empty_text: "No entries saved yet.",
+        history_empty_btn: "Make first check-in",
+        history_no_matches: "No entries match the selected filters.",
+        history_reset_filters: "Reset filters",
+        history_checkin_singular: "check-in",
+        history_checkin_plural: "check-ins",
+        history_med_taken: "✓ Medication",
+        history_med_missed: "✗ No medication",
+        history_view_details: "View details →",
+        history_btn_edit: "✏️ Edit",
+        history_btn_delete: "🗑️ Delete",
+        history_confirm_delete: "Are you sure you want to permanently delete the entry from",
+        history_toast_deleted: "Entry was deleted.",
+
+        // Entry Detail Modal (#entry-detail-modal)
+        detail_lbl_mood: "Mood",
+        detail_lbl_sleep: "Sleep",
+        detail_lbl_anxiety: "Anxiety",
+        detail_lbl_energy: "Energy",
+        detail_title_treatment: "Treatment",
+        detail_title_symptoms: "Symptoms / States",
+        detail_title_notes: "Journal / Notes",
+        btn_edit: "Edit",
+        btn_delete: "Delete",
+        detail_med_taken: "✓ Prescribed medication taken today",
+        detail_med_not_taken: "✗ Prescribed medication not taken today"
     }
 };
 
@@ -677,6 +757,10 @@ function setLanguage(lang) {
     const safetyCoping = document.getElementById('safety-coping');
     if (safetyCoping) safetyCoping.placeholder = t('safety_coping_ph');
 
+    // Update History search placeholder
+    const historySearch = document.getElementById('history-search');
+    if (historySearch) historySearch.placeholder = t('history_search_ph');
+
     // Update breathing exercise button and instruction if idle
     if (typeof isBreathingRunning !== 'undefined' && !isBreathingRunning) {
         const breathingBtn = document.getElementById('breathing-start-btn');
@@ -693,10 +777,13 @@ function setLanguage(lang) {
     if (anxietyInput) updateSliderVal('anxiety-val', anxietyInput.value);
     if (energyInput) updateSliderVal('energy-val', energyInput.value);
 
+    // Re-render history list if element exists to update month names, tags and buttons
+    if (document.getElementById('history-list')) {
+        renderHistory();
+    }
+
     if (tabId === 'dashboard') {
         updateDashboard();
-    } else if (tabId === 'history') {
-        renderHistory();
     }
 }
 
@@ -2216,8 +2303,8 @@ function renderHistory() {
     if (moodEntries.length === 0) {
         list.innerHTML = `
             <div class="empty-state">
-                <p>Nu există nicio înregistrare salvată până acum.</p>
-                <button class="action-btn-primary" onclick="switchTab('log')">Fă primul check-in</button>
+                <p data-i18n="history_empty_text">${t('history_empty_text')}</p>
+                <button class="action-btn-primary" onclick="switchTab('log')" data-i18n="history_empty_btn">${t('history_empty_btn')}</button>
             </div>
         `;
         return;
@@ -2249,8 +2336,8 @@ function renderHistory() {
     if (filtered.length === 0) {
         list.innerHTML = `
             <div class="empty-state">
-                <p>Nicio înregistrare nu se potrivește filtrelor selectate.</p>
-                <button class="action-btn-secondary btn-sm" onclick="setHistoryFilter('all')" style="margin-top:0.6rem">Resetează filtrele</button>
+                <p>${t('history_no_matches')}</p>
+                <button class="action-btn-secondary btn-sm" onclick="setHistoryFilter('all')" style="margin-top:0.6rem">${t('history_reset_filters')}</button>
             </div>
         `;
         return;
@@ -2261,13 +2348,19 @@ function renderHistory() {
 
     // Group by Month & Year (e.g. "AUGUST 2026")
     const groupedByMonth = {};
+    const monthNamesRO = [
+        "IANUARIE", "FEBRUARIE", "MARTIE", "APRILIE", "MAI", "IUNIE",
+        "IULIE", "AUGUST", "SEPTEMBRIE", "OCTOMBRIE", "NOIEMBRIE", "DECEMBRIE"
+    ];
+    const monthNamesEN = [
+        "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+        "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
+    ];
+    const monthNames = currentLanguage === 'en' ? monthNamesEN : monthNamesRO;
+
     sortedDesc.forEach(entry => {
         const dateObj = new Date(entry.date);
-        const monthNamesRO = [
-            "IANUARIE", "FEBRUARIE", "MARTIE", "APRILIE", "MAI", "IUNIE",
-            "IULIE", "AUGUST", "SEPTEMBRIE", "OCTOMBRIE", "NOIEMBRIE", "DECEMBRIE"
-        ];
-        const monthYearKey = `${monthNamesRO[dateObj.getMonth()]} ${dateObj.getFullYear()}`;
+        const monthYearKey = `${monthNames[dateObj.getMonth()]} ${dateObj.getFullYear()}`;
         if (!groupedByMonth[monthYearKey]) {
             groupedByMonth[monthYearKey] = [];
         }
@@ -2283,20 +2376,24 @@ function renderHistory() {
 
         const monthHeader = document.createElement('div');
         monthHeader.className = 'history-month-header';
+        const countTxt = monthEntries.length === 1 ? t('history_checkin_singular') : t('history_checkin_plural');
         monthHeader.innerHTML = `
             <span class="month-title">${monthKey}</span>
-            <span class="month-count">${monthEntries.length} ${monthEntries.length === 1 ? 'check-in' : 'check-in-uri'}</span>
+            <span class="month-count">${monthEntries.length} ${countTxt}</span>
         `;
         monthGroup.appendChild(monthHeader);
 
         const itemsBox = document.createElement('div');
         itemsBox.className = 'history-items-box';
 
+        const monthShortNamesRO = ["IAN", "FEB", "MAR", "APR", "MAI", "IUN", "IUL", "AUG", "SEP", "OCT", "NOI", "DEC"];
+        const monthShortNamesEN = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+        const monthShortNames = currentLanguage === 'en' ? monthShortNamesEN : monthShortNamesRO;
+
         monthEntries.forEach(e => {
             const dateObj = new Date(e.date);
             const dayNum = dateObj.getDate().toString().padStart(2, '0');
-            const monthShortNamesRO = ["JAN", "FEB", "MAR", "APR", "MAI", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-            const monthShort = monthShortNamesRO[dateObj.getMonth()];
+            const monthShort = monthShortNames[dateObj.getMonth()];
 
             const moodSign = e.mood > 0 ? "+" : "";
             const moodValText = e.mood === 0 ? "0" : `${moodSign}${e.mood}`;
@@ -2328,13 +2425,13 @@ function renderHistory() {
 
                 <div class="history-item-right" onclick="event.stopPropagation()">
                     <div class="history-sub-info">
-                        <span class="med-tag ${e.medicationTaken ? 'yes' : 'no'}">${e.medicationTaken ? '✓ Tratament' : '✗ Fără tratament'}</span>
-                        ${symptomsText ? `<span class="symptoms-summary-tag">${symptomsText}</span>` : ''}
+                        <span class="med-tag ${e.medicationTaken ? 'yes' : 'no'}">${e.medicationTaken ? t('history_med_taken') : t('history_med_missed')}</span>
+                        ${symptomsText ? `<span class="symptoms-summary-tag">${escapeHTML(symptomsText)}</span>` : ''}
                     </div>
                     <div class="history-actions-inline">
-                        <button class="btn-detail-link" onclick="showEntryDetailModal('${e.date}')">Vezi detalii →</button>
-                        <button class="btn-edit-action" onclick="editEntry('${e.date}')">✏️ Editează</button>
-                        <button class="btn-delete-action" onclick="deleteEntry('${e.date}')" title="Șterge">🗑️</button>
+                        <button class="btn-detail-link" onclick="showEntryDetailModal('${e.date}')">${t('history_view_details')}</button>
+                        <button class="btn-edit-action" onclick="editEntry('${e.date}')">${t('history_btn_edit')}</button>
+                        <button class="btn-delete-action" onclick="deleteEntry('${e.date}')" title="${t('btn_delete')}">🗑️</button>
                     </div>
                 </div>
             `;
@@ -2356,20 +2453,20 @@ function showEntryDetailModal(dateStr) {
     document.getElementById('detail-modal-date').textContent = formatDateRO(entry.date);
     
     const moodSign = entry.mood > 0 ? "+" : "";
-    document.getElementById('detail-mood').textContent = entry.mood === 0 ? "0 (Stabil)" : `${moodSign}${entry.mood}`;
+    document.getElementById('detail-mood').textContent = entry.mood === 0 ? `0 (${t('mood_0_title') || 'Stabil'})` : `${moodSign}${entry.mood}`;
     document.getElementById('detail-sleep').textContent = `${entry.sleep}h`;
     document.getElementById('detail-anxiety').textContent = `${entry.anxiety} / 10`;
     document.getElementById('detail-energy').textContent = `${entry.energy} / 10`;
     document.getElementById('detail-medication').textContent = entry.medicationTaken 
-        ? "✓ Am urmat tratamentul prescris astăzi" 
-        : "✗ Nu am urmat tratamentul pentru această zi";
+        ? t('detail_med_taken') 
+        : t('detail_med_not_taken');
 
     // Symptoms
     const symptomsBox = document.getElementById('detail-symptoms-box');
     const symptomsList = document.getElementById('detail-symptoms-list');
     if (entry.symptoms && entry.symptoms.length > 0) {
         symptomsBox.style.display = 'block';
-        symptomsList.innerHTML = entry.symptoms.map(s => `<span class="symptom-tag-pill">${capitalizeFirst(s)}</span>`).join('');
+        symptomsList.innerHTML = entry.symptoms.map(s => `<span class="symptom-tag-pill">${escapeHTML(getSymptomLabel(s))}</span>`).join('');
     } else {
         symptomsBox.style.display = 'none';
     }
@@ -2436,6 +2533,9 @@ function normalizeSymptomId(symptomId) {
 
 function getSymptomLabel(symptomId) {
     const normId = normalizeSymptomId(symptomId);
+    const symKey = 'symptom_' + normId;
+    const trans = t(symKey);
+    if (trans && trans !== symKey) return trans;
     return SYMPTOM_LABELS_MAP[normId] || capitalizeFirst(normId);
 }
 
@@ -2455,10 +2555,11 @@ function escapeHTML(text) {
 
 // Delete entry handler
 function deleteEntry(dateStr) {
-    if (confirm(`Sigur dorești să ștergi definitiv înregistrarea din data de ${formatDateRO(dateStr)}?`)) {
+    const confirmPrompt = `${t('history_confirm_delete')} ${formatDateRO(dateStr)}?`;
+    if (confirm(confirmPrompt)) {
         moodEntries = moodEntries.filter(e => e.date !== dateStr);
         saveEntriesToStorage();
-        showToast("Înregistrarea a fost ștearsă.");
+        showToast(t('history_toast_deleted') || "Înregistrarea a fost ștearsă.");
         
         // Refresh appropriate views
         const activeTab = document.querySelector('.nav-btn.active').id.replace('btn-', '');
